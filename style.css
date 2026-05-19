@@ -15,6 +15,14 @@ a:hover {
     color: aqua;
 }
 
+tr[data-href] {
+    cursor: pointer;
+}
+
+tr[data-href]:hover {
+    color:aqua;
+}
+
 .toolbar {
     position: sticky;
     bottom: 0;

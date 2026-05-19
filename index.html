@@ -13,18 +13,18 @@
   <section id="main">
     <h1 class="page-title">Grade Tracker</h1>
 
-    <h2>Overall GPA: 4.31</h2>
+    <h2>Overall GPA: 3.70</h2>
 
     <div class="semester-group" id="Fall 2026">
       <button>Fall 2026</button>
 
       <div class="collapsible-content">
         <table>
-          <tr data-href="F26C1">
-            <td><a href="F26C1.html">F26C1</a></td>
+          <tr data-href="F26C1.html">
+            <td>F26C1</td>
             <td>A+</td>
           </tr>
-          <tr>
+          <tr data-href="F26C1.html">
             <td>F26C2</td>
             <td>A-</td>
           </tr>
@@ -37,7 +37,7 @@
 
       <div class="collapsible-content">
         <table>
-          <tr>
+          <tr data-href="F26C1.html">
             <td>S26C1</td>
             <td>A</td>
           </tr>
@@ -65,6 +65,19 @@
         </table>
       </div>
     </div>
+
+    <!--TODO: put into .js file-->
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const rows = document.querySelectorAll("tr[data-href]");
+
+        rows.forEach(row => {
+          row.addEventListener("click", () => {
+            window.location.href = row.dataset.href;
+          });
+        });
+      });
+    </script>
 
     <div class="toolbar">
       <button type="button" class="btn" id="add-course-button">Add a Course</button>
