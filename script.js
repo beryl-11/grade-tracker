@@ -36,7 +36,7 @@ courses.forEach(course => {
     const courseDiv = document.createElement("section");
 
     courseDiv.innerHTML = `
-    <h2 class="courseName">${course.name} ${course.grade}</h2>
+    <h2 class="courseName"><a href="#${course.name}">${course.name} ${course.grade}</a></h2>
   `;
 
     courseNames.appendChild(courseDiv);

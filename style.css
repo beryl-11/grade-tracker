@@ -1,7 +1,16 @@
-.courseName {
+html {
     font-family: "Quicksand", sans-serif;
+    color: black;
 }
 
-.title {
-    font-family: "Quicksand", sans-serif;
+a:link {
+    text-decoration: none;
+}
+
+a:visited {
+    color: black;
+}
+
+a:hover {
+    color: aqua;
 }
