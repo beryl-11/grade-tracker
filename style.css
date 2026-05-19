@@ -3,24 +3,12 @@ html {
     color: black;
 }
 
-a:link {
-    text-decoration: none;
-}
-
-a:visited {
-    color: black;
-}
-
-a:hover {
+a:hover, tr[data-href]:hover {
     color: aqua;
 }
 
 tr[data-href] {
     cursor: pointer;
-}
-
-tr[data-href]:hover {
-    color:aqua;
 }
 
 .toolbar {
