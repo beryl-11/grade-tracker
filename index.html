@@ -10,17 +10,68 @@
 </head>
 
 <body>
-  <h1 class="title">Grade Tracker</h1>
+  <section id="main">
+    <h1 class="page-title">Grade Tracker</h1>
 
-  <h2>Overall GPA</h2>
+    <h2>Overall GPA: 4.31</h2>
 
-  <div id="course-names"></div>
+    <div class="semester-group" id="Fall 2026">
+      <button>Fall 2026</button>
 
-  <script src="script.js"></script>
+      <div class="collapsible-content">
+        <table>
+          <tr data-href="F26C1">
+            <td><a href="F26C1.html">F26C1</a></td>
+            <td>A+</td>
+          </tr>
+          <tr>
+            <td>F26C2</td>
+            <td>A-</td>
+          </tr>
+        </table>
+      </div>
+    </div>
 
-  <div class="toolbar">
-    <button type="button" class="btn" id="add-course-button">Add a Course</button>
-  </div>
+    <div class="semester-group" id="Spring 2026">
+      <button>Spring 2026</button>
+
+      <div class="collapsible-content">
+        <table>
+          <tr>
+            <td>S26C1</td>
+            <td>A</td>
+          </tr>
+          <tr>
+            <td>S26C2</td>
+            <td>B+</td>
+          </tr>
+        </table>
+      </div>
+    </div>
+
+    <div class="semester-group" id="Fall 2025">
+      <button>Fall 2025</button>
+
+      <div class="collapsible-content">
+        <table>
+          <tr>
+            <td>F25C1</td>
+            <td>A+</td>
+          </tr>
+          <tr>
+            <td>F25C2</td>
+            <td>A</td>
+          </tr>
+        </table>
+      </div>
+    </div>
+
+    <div class="toolbar">
+      <button type="button" class="btn" id="add-course-button">Add a Course</button>
+    </div>
+  </section>
+
+  </section>
 </body>
 
 </html>
