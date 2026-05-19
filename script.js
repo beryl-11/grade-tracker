@@ -1,6 +1,7 @@
 const courses = [
     {
         name: "Course 1",
+        credit : 4,
         assignments: [
             { name: "Homework 1", score: 95, max: 100 },
             { name: "Midterm", score: 88, max: 100 }
@@ -8,6 +9,7 @@ const courses = [
     },
     {
         name: "Course 2",
+        credit : 4,
         assignments: [
             { name: "Homework 1", score: 95, max: 100 },
             { name: "Midterm", score: 88, max: 100 }
@@ -15,13 +17,14 @@ const courses = [
     },
     {
         name: "Course 3",
+        credit : 2,
         assignments: [
             { name: "Homework 1", score: 95, max: 100 },
             { name: "Midterm", score: 88, max: 100 }
         ]
     }
 ];
-const app = document.getElementById("app");
+const courseNames = document.getElementById("course-names");
 
 courses.forEach(course => {
     const courseDiv = document.createElement("section");
@@ -30,5 +33,5 @@ courses.forEach(course => {
     <h2 class="courseName">${course.name}</h2>
   `;
 
-    app.appendChild(courseDiv);
+    courseNames.appendChild(courseDiv);
 });
