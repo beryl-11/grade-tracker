@@ -14,3 +14,10 @@ a:visited {
 a:hover {
     color: aqua;
 }
+
+.toolbar {
+    position: sticky;
+    bottom: 0;
+    background-color: aquamarine;
+    padding: 10px 16px;
+}
