@@ -27,7 +27,7 @@ courses.forEach(course => {
     const courseDiv = document.createElement("section");
 
     courseDiv.innerHTML = `
-    <button>${course.name}</button>
+    <h2 class="courseName">${course.name}</h2>
   `;
 
     app.appendChild(courseDiv);
