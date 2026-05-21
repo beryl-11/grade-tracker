@@ -1,6 +1,20 @@
-html {
+html * {
     font-family: "Quicksand", sans-serif;
-    color: black;
+}
+
+.page-title {
+    text-align: center;
+}
+
+.collapsible-btn {
+    cursor: pointer;
+    border: none;
+    font-size: large;
+    font-weight: bold;
+}
+
+.collapsible-content {
+    margin-left: 10px;
 }
 
 a:hover, tr[data-href]:hover {
