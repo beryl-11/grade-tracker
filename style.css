@@ -4,6 +4,9 @@ html * {
 
 .page-title {
     text-align: center;
+    background-color: aquamarine;
+    margin-top: 0;
+    padding: 10px;
 }
 
 .collapsible-btn {
