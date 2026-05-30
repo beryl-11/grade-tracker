@@ -1,4 +1,4 @@
-html * {
+* {
     font-family: "Quicksand", sans-serif;
 }
 
@@ -12,20 +12,23 @@ html * {
 .collapsible-btn {
     cursor: pointer;
     border: none;
+    width: 100%;
     font-size: large;
-    font-weight: bold;
 }
 
 .collapsible-content {
     margin-left: 10px;
 }
 
-a:hover, tr[data-href]:hover {
+a:hover, a.row-link:hover {
     color: aqua;
 }
 
-tr[data-href] {
+a.row-link {
     cursor: pointer;
+    text-decoration: none;
+    color: black;
+    display: block;
 }
 
 .toolbar {

@@ -12,7 +12,6 @@
 </head>
 
 <body>
-  <section id="main">
     <h1 class="page-title">My Grade Tracker</h1>
 
     <h2 id="overall-gpa">Overall GPA: 3.70</h2>
@@ -21,16 +20,12 @@
       <button class="collapsible-btn">Fall 2026</button>
 
       <div class="collapsible-content">
-        <table>
-          <tr data-href="F26C1.html">
-            <td>F26C1</td>
-            <td>A+</td>
-          </tr>
-          <tr data-href="F26C1.html">
-            <td>F26C2</td>
-            <td>A-</td>
-          </tr>
-        </table>
+        <a class="row-link" href="F26C1.html">
+          <span class="course-name">F26C1</span><span class="course-grade">A+</span>
+        </a>
+        <a class="row-link" href="F26C1.html">
+          <span class="course-name">F26C2</span><span class="course-grade">A-</span>
+        </a>
       </div>
     </div>
 
@@ -84,9 +79,6 @@
     <div class="toolbar">
       <button type="button" class="btn" id="add-course-button">Add a Course</button>
     </div>
-  </section>
-
-  </section>
 </body>
 
 </html>
