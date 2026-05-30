@@ -1,3 +1,8 @@
+:root {
+    --primary-color: rgb(192, 243, 228);
+    --text-color: black;
+}
+
 * {
     font-family: "Quicksand", sans-serif;
 }
@@ -8,7 +13,7 @@ body {
 
 .page-title {
     text-align: center;
-    background-color: aquamarine;
+    background-color: var(--primary-color);
     margin-top: 0;
     padding: 10px;
 }
@@ -20,14 +25,10 @@ body {
     font-size: large;
 }
 
-.collapsible-content {
-    margin-left: 10px;
-}
-
 a.row-link {
     cursor: pointer;
     text-decoration: none;
-    color: black;
+    color: var(--text-color);
     display: block;
 }
 
@@ -38,6 +39,6 @@ a:hover {
 .toolbar {
     position: sticky;
     bottom: 0;
-    background-color: aquamarine;
+    background-color: var(--primary-color);
     padding: 10px 16px;
 }
