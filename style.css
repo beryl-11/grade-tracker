@@ -5,6 +5,7 @@
 body {
     margin: 0;
 }
+
 .page-title {
     text-align: center;
     background-color: aquamarine;
@@ -23,15 +24,15 @@ body {
     margin-left: 10px;
 }
 
-a:hover, a.row-link:hover {
-    color: aqua;
-}
-
 a.row-link {
     cursor: pointer;
     text-decoration: none;
     color: black;
     display: block;
+}
+
+a:hover {
+    color: aqua;
 }
 
 .toolbar {
