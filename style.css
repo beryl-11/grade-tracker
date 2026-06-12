@@ -25,6 +25,10 @@ body {
     font-size: large;
 }
 
+.collapsible-btn:hover {
+    background-color: var(--primary-color);
+}
+
 a.row-link {
     cursor: pointer;
     text-decoration: none;
@@ -33,7 +37,7 @@ a.row-link {
 }
 
 a:hover {
-    color: aqua;
+    color: var(--primary-color);
 }
 
 .toolbar {
