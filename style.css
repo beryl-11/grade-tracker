@@ -19,14 +19,22 @@ body {
     text-align: center;
     background-color: var(--primary-color);
     margin-top: 0;
+    width: 100%;
+    min-height: 1em;
     padding: 10px;
+}
+
+.semester-group {
+    width: 100vw;
 }
 
 .collapsible-btn {
     cursor: pointer;
     border: none;
+    font-size: 16px;
     width: 100%;
-    font-size: large;
+    padding: 0.5em;
+    text-align: left;
 }
 
 .collapsible-btn:hover {
