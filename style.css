@@ -7,6 +7,10 @@
     font-family: "Quicksand", sans-serif;
 }
 
+.hidden {
+    display: none;
+}
+
 body {
     margin: 0;
 }
