@@ -39,6 +39,17 @@ button {
     border-radius: 12px;
 }
 
+button:hover {
+    /* background-color: var(--focus-color); */
+    /* transform: translate(-2px, -2px);
+    transition: all 0.3s ease; */
+}
+
+button:active {
+    transform: scale(.99);
+    transition: transform 0.3s ease;
+}
+
 hr {
     width: 95%;
     margin-left: 2.5%;
@@ -90,12 +101,9 @@ header a {
 }
 
 /* Grade Details Section */
-#grade-details {
-    /* background-color: blue; */
-}
-
 .semester-group {
     width: 90vw;
+    margin: 1rem; /*need to horizontal center*/
     font-size: 1.1rem;
 }
 
@@ -104,11 +112,6 @@ header a {
     padding: 0.5em;
     text-align: left;
     font-size: 1.1em;
-}
-
-.collapsible-btn:hover {
-    background-color: var(--focus-color);
-    /* transition: background-color 0.1s ease; */
 }
 
 .collapsible-btn::before {
@@ -121,7 +124,7 @@ header a {
 }
 
 .collapsible-content {
-    margin: 0.5em 1.5em;
+    margin: 0.5em 2em;
     font-size: 1em;
 }
 
