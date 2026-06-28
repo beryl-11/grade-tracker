@@ -3,7 +3,7 @@
     --primary-color: rgb(192, 243, 228);
     --background-color: #F5F5F0;
     --accent-color: #E3E3B0;
-    --focus-color: rgb(255, 228, 196);
+    --focus-color: #b0ad9b;
     --text-color: black;
 }
 
@@ -35,7 +35,7 @@ button {
     cursor: pointer;
     background-color: var(--accent-color);
     /* border-color: aliceblue; */
-    border: 3px solid #b0ad9b;
+    border: 3px solid var(--focus-color);
     border-radius: 12px;
 }
 
