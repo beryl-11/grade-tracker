@@ -7,9 +7,9 @@
     font-family: "Quicksand", sans-serif;
 }
 
-.hidden {
+/* .hidden {
     display: none;
-}
+} */
 
 body {
     margin: 0;
@@ -19,7 +19,7 @@ body {
     text-align: center;
     background-color: var(--primary-color);
     margin-top: 0;
-    width: 100%;
+    max-width: 100%;
     min-height: 1em;
     padding: 10px;
 }
@@ -41,6 +41,20 @@ body {
     background-color: var(--primary-color);
 }
 
+.collapsible-btn::before {
+    content: "+ ";
+}
+
+/* need way for this to stay on when toggled */
+.collapsible-btn:active::before {
+    content: "- ";
+    border-style: dashed;
+}
+
+.collapsible-content {
+    margin-left: 21.4px;
+}
+
 a.row-link {
     cursor: pointer;
     text-decoration: none;
@@ -57,4 +71,6 @@ a:hover {
     bottom: 0;
     background-color: var(--primary-color);
     padding: 10px 16px;
+    display: flex;
+    justify-content: space-evenly;
 }
