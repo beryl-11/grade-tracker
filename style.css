@@ -26,19 +26,21 @@ body {
 
 .semester-group {
     width: 100vw;
+    font-size: 1.1rem;
 }
 
 .collapsible-btn {
     cursor: pointer;
     border: none;
-    font-size: 16px;
     width: 100%;
     padding: 0.5em;
     text-align: left;
+    font-size: 1em;
 }
 
 .collapsible-btn:hover {
     background-color: var(--primary-color);
+    /* transition: background-color 0.1s ease; */
 }
 
 .collapsible-btn::before {
@@ -52,7 +54,8 @@ body {
 }
 
 .collapsible-content {
-    margin-left: 21.4px;
+    margin-left: 1.5rem;
+    font-size: 0.9em;
 }
 
 a.row-link {
