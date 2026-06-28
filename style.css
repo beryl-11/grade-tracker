@@ -1,12 +1,18 @@
 :root {
     --primary-color: rgb(192, 243, 228);
+    --focus-color: rgb(255, 228, 196);
     --text-color: black;
 }
 
 * {
     font-family: "Quicksand", sans-serif;
-    overflow: hidden;
+    overflow-x: hidden;
     margin: 0;
+}
+
+*:focus {
+    outline-color: var(--focus-color);
+    background-color: var(--focus-color);
 }
 
 .page-title {
@@ -36,7 +42,7 @@
 }
 
 .collapsible-btn:hover {
-    background-color: var(--primary-color);
+    background-color: var(--focus-color);
     /* transition: background-color 0.1s ease; */
 }
 
@@ -63,7 +69,7 @@ a.row-link {
 }
 
 a:hover {
-    color: var(--primary-color);
+    color: var(--focus-color);
 }
 
 .toolbar {
