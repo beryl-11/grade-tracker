@@ -5,23 +5,20 @@
 
 * {
     font-family: "Quicksand", sans-serif;
-}
-
-/* .hidden {
-    display: none;
-} */
-
-body {
+    overflow: hidden;
     margin: 0;
 }
 
 .page-title {
     text-align: center;
     background-color: var(--primary-color);
-    margin-top: 0;
     max-width: 100%;
     min-height: 1em;
     padding: 10px;
+}
+
+#overall-gpa {
+    padding: 1%;
 }
 
 .semester-group {
@@ -54,7 +51,7 @@ body {
 }
 
 .collapsible-content {
-    margin-left: 1.5rem;
+    margin-left: 1.5em;
     font-size: 0.9em;
 }
 
@@ -71,9 +68,8 @@ a:hover {
 
 .toolbar {
     position: sticky;
-    bottom: 0;
     background-color: var(--primary-color);
-    padding: 10px 16px;
     display: flex;
     justify-content: space-evenly;
+    padding: 2vh 0;
 }
