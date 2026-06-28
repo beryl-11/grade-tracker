@@ -22,7 +22,6 @@
 
 /* || General Styles */
 body {
-    /* padding: 0 20px; */
     background-color: var(--background-color);
     min-width: 320px; /*not working*/
 }
@@ -52,8 +51,9 @@ button:active {
 
 hr {
     width: 95%;
-    margin-left: 2.5%;
-    margin-right: 2.5%;
+    margin: 2.5%;
+    border: 2px solid var(--focus-color);
+    border-radius: 12px;
 }
 
 /* || Utilities */
@@ -66,7 +66,8 @@ header {
     background-color: var(--accent-color);
     display: flex;
     justify-content: space-around;
-    padding: 10px;
+    padding: 1rem;
+    border-bottom: 3px solid var(--focus-color);
 }
 
 header a {
@@ -77,9 +78,8 @@ header a {
 
 /* Intro Section */
 #intro {
-    margin: 0px;
     /* need to calc correctly and scalable */
-    padding-bottom: 0%;
+    padding-bottom: 0;
     display: inline-flex;
     width: 100vw;
 }
@@ -90,17 +90,19 @@ header a {
 .greeting {
     font-size: 3rem;
     /* border-style: dashed; */
-    margin-bottom: 0;
 }
 
-#overall-gpa {
+#overall-gpa-statement {
     /* border-style: dotted; */
-    margin-bottom: 30px;
     font-size: 2rem;
     margin-top: 0.5rem;
 }
 
 /* Grade Details Section */
+#grade-details {
+    padding-top: 0;
+}
+
 .semester-group {
     width: 90vw;
     margin: 1rem; /*need to horizontal center*/
@@ -147,8 +149,17 @@ a:hover {
     display: flex;
     justify-content: space-evenly;
     padding: 2vh 0;
+    /* opacity: 90%; */
 }
 
-#add-course-button {
-    padding: 25% 10%;
+#add-course-btn {
+    padding: 25%;
+    min-width: 70px;
+    min-height: 70px;
+    border-radius: 50%;
+}
+
+#add-course-btn:active {
+    transform: scale(.95);
+    transition: transform 0.3s ease;
 }
