@@ -62,12 +62,12 @@ section {
 }
 
 .semester-group {
-    width: 100vw;
+    width: 90vw;
     font-size: 1.1rem;
 }
 
 .collapsible-btn {
-    width: 90vw;
+    width: 100%;
     padding: 0.5em;
     text-align: left;
     font-size: 1.1em;
