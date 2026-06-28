@@ -12,9 +12,28 @@
 </head>
 
 <body>
-    <h1 class="page-title">My Grade Tracker</h1>
-    <h2 id="overall-gpa">Overall GPA: 3.70</h2>
+  <header>
+    <p>Grade Tracker</p>
+    <nav>
 
+    </nav>
+  </header>
+
+  <section id="intro">
+    <div class="left-box">
+      <h1 class="greeting">Hello, {name}.</h1>
+      <p id="overall-gpa">Your current GPA is {3.00}.</p>
+      <!-- <a href="#grade-details">View Details</a> -->
+    </div>
+    <div class="right-box">
+      <img src="https://placehold.co/150" alt="graph of grade composition">
+    </div>
+  </section>
+
+  <hr></hr>
+
+  <section id="grade-details">
+    <h1>Details</h1>
     <div class="semester-group" id="Fall-2026-group">
       <button type="button" class="collapsible-btn">Fall 2026</button>
 
@@ -27,10 +46,13 @@
         </a>
       </div>
     </div>
+  </section>
 
-    <div class="toolbar">
-      <button type="button" class="btn" id="add-course-button">Add a Course</button>
-    </div>
+  <div class="toolbar">
+    <button type="button" class="btn" id="add-course-button">Add a Course</button>
+  </div>
+
+  <footer></footer>
 </body>
 
 </html>
