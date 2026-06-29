@@ -12,7 +12,7 @@
     padding: 0;
     box-sizing: border-box;
     font-family: "Quicksand", sans-serif;
-    overflow-x: hidden;
+    /* overflow-x: hidden; */
 }
 
 *:focus {
@@ -33,7 +33,6 @@ section {
 button {
     cursor: pointer;
     background-color: var(--accent-color);
-    /* border-color: aliceblue; */
     border: 3px solid var(--focus-color);
     border-radius: 12px;
 }
@@ -56,10 +55,29 @@ hr {
     border-radius: 12px;
 }
 
+table {
+    border: 3px solid var(--focus-color);
+    border-radius: 12px;
+    padding: 1em;
+    width: 90%;
+    text-align: center;
+}
+
+
 /* || Utilities */
 .left-box {
     width: 50%;
 }
+
+.page-title {
+    font-size: 3rem;
+}
+
+.overall-grade {
+    font-size: 1.9rem;
+    margin-top: 0.5rem;
+}
+
 
 /* || Header and Main Navigation */
 header {
@@ -86,16 +104,6 @@ header a {
 
 #intro .left-box {
     width: 60%;
-}
-.greeting {
-    font-size: 3rem;
-    /* border-style: dashed; */
-}
-
-#overall-gpa-statement {
-    /* border-style: dotted; */
-    font-size: 2rem;
-    margin-top: 0.5rem;
 }
 
 /* Grade Details Section */
