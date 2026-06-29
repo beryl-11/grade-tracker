@@ -23,11 +23,13 @@
 /* || General Styles */
 body {
     background-color: var(--background-color);
-    min-width: 320px; /*not working*/
+    min-width: 320px;
+    /*not working*/
 }
 
 section {
-    padding: 1rem 2rem; 
+    width: 100%;
+    padding: 1rem 2rem;
 }
 
 button {
@@ -38,9 +40,7 @@ button {
 }
 
 button:hover {
-    /* background-color: var(--focus-color); */
-    /* transform: translate(-2px, -2px);
-    transition: all 0.3s ease; */
+    background-color: var(--focus-color);
 }
 
 button:active {
@@ -65,6 +65,10 @@ table {
 
 
 /* || Utilities */
+.flex {
+    display: flex;
+}
+
 .left-box {
     width: 50%;
 }
@@ -82,10 +86,11 @@ table {
 /* || Header and Main Navigation */
 header {
     background-color: var(--accent-color);
-    display: flex;
     justify-content: space-around;
     padding: 1rem;
     border-bottom: 3px solid var(--focus-color);
+    width: 100%;
+    /* max-height: 10vh; */
 }
 
 header a {
@@ -98,7 +103,6 @@ header a {
 #intro {
     /* need to calc correctly and scalable */
     padding-bottom: 0;
-    display: inline-flex;
     width: 100vw;
 }
 
@@ -111,9 +115,16 @@ header a {
     padding-top: 0;
 }
 
+#details-list {
+    justify-content: center;
+    flex-wrap: wrap;
+    
+}
+
 .semester-group {
+    /* background-color: aquamarine; */
     width: 90vw;
-    margin: 1rem; /*need to horizontal center*/
+    /*need to horizontal center*/
     font-size: 1.1rem;
 }
 
@@ -122,6 +133,7 @@ header a {
     padding: 0.5em;
     text-align: left;
     font-size: 1.1em;
+    margin-top: 2.2%;
 }
 
 .collapsible-btn::before {
@@ -154,7 +166,6 @@ a:hover {
     position: fixed;
     bottom: 20px;
     right: 20px;
-    display: flex;
     justify-content: space-evenly;
     padding: 2vh 0;
     /* opacity: 90%; */

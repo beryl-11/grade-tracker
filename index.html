@@ -12,7 +12,7 @@
 </head>
 
 <body>
-  <header>
+  <header class="flex">
     <div class="left-box"><a href="index.html" id="logo">Grade Tracker</a></div>
     <div class="right-box">
       <nav>
@@ -36,26 +36,30 @@
 
   <section id="grade-details">
     <h1>Details</h1>
-    <div class="semester-group" id="Fall-2026-group">
-      <button type="button" class="collapsible-btn">Fall 2026</button>
 
-      <div class="collapsible-content">
-        <a class="row-link" href="F26C1.html">
-          <span class="course-name">F26C1</span><span class="course-grade">A+</span>
-        </a>
-        <a class="row-link" href="F26C1.html">
-          <span class="course-name">F26C2</span><span class="course-grade">A-</span>
-        </a>
+    <div class="flex" id="details-list">
+      <div class="semester-group" id="Fall-2026-group">
+        <button type="button" class="collapsible-btn">Fall 2026</button>
+
+        <div class="collapsible-content">
+          <a class="row-link" href="F26C1.html">
+            <span class="course-name">F26C1</span><span class="course-grade">A+</span>
+          </a>
+          <a class="row-link" href="F26C1.html">
+            <span class="course-name">F26C2</span><span class="course-grade">A-</span>
+          </a>
+        </div>
       </div>
-    </div>
 
-    <div class="semester-group" id="Spring-2026-group">
-      <button type="button" class="collapsible-btn">Spring 2026</button>
 
-      <div class="collapsible-content">
-        <a class="row-link" href="S26C1.html">
-          <span class="course-name">S26C1</span><span class="course-grade">A+</span>
-        </a>
+      <div class="semester-group" id="Spring-2026-group">
+        <button type="button" class="collapsible-btn">Spring 2026</button>
+
+        <div class="collapsible-content">
+          <a class="row-link" href="S26C1.html">
+            <span class="course-name">S26C1</span><span class="course-grade">A+</span>
+          </a>
+        </div>
       </div>
     </div>
   </section>
