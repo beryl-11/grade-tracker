@@ -73,10 +73,6 @@ table {
     display: grid;
 }
 
-.left-box, .right-box {
-    width: 50%;
-}
-
 .page-title {
     font-size: 3rem;
 }
@@ -121,10 +117,6 @@ header a {
 
 }
 
-#grade-details .left-box {
-    border: 3px solid blue;
-}
-
 .semester-group {
     /* background-color: aquamarine; */
     width: 90vw;
@@ -165,7 +157,7 @@ a:hover {
     color: var(--focus-color);
 }
 
-#grade-details .img-box {
+#grade-details .img-container {
     border: 3px solid tan;
     display: grid;
     justify-content: center;
