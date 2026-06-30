@@ -69,7 +69,7 @@ table {
     display: flex;
 }
 
-.grid {
+.grid-container {
     display: grid;
 }
 
@@ -100,27 +100,6 @@ header {
 header a {
     text-decoration: none;
     color: var(--text-color);
-}
-
-/* need to fix scalability in terms of shrink screen*/
-header .left-box {
-    /* background-color: blue; */
-    flex: 0 1 50%;
-}
-header .right-box {
-    /* background-color: red; */
-    flex: 1 1 50%;
-}
-
-head
-header nav {
-    justify-content: end;
-}
-
-header nav a {
-    display: flex;
-    flex-grow: 1;
-    justify-self: right;
 }
 
 /* Intro Section */
