@@ -84,9 +84,10 @@ table {
     margin-top: 0.5rem;
 }
 
-.box {
-    background-color: aquamarine;
-    border: 1px dashed green;
+.circle-placeholder {
+    background-color: orange;
+    border: 4px solid green;
+    border-radius: 50%;
 }
 
 /* || Header and Main Navigation */
