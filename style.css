@@ -94,7 +94,7 @@ table {
     max-width: 70%;
 }
 
-/* || Header and Main Navigation */
+/* || Header */
 .global-header {
     background-color: var(--accent-color);
     justify-content: space-around;
