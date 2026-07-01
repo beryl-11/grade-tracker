@@ -12,9 +12,9 @@
 </head>
 
 <body>
-  <header class="global-header flex">
+  <header class="global-header flex-container">
+    <a href="index.html" id="logo">{Grade Tracker}</a>
     <nav class="global-nav">
-      <a href="index.html" id="logo">{Grade Tracker}</a>
       <a href="./">Sign In</a>
     </nav>
   </header>
@@ -25,12 +25,13 @@
       <p class="overall-grade" id="overall-gpa-statement">Your current GPA is {3.00}.</p>
     </header>
 
-    <hr></hr>
+    <hr>
+    </hr>
 
     <section id="grade-details">
       <h1>Details</h1>
       <div class="grid-container" id="grade-details-grid">
-        <div class="flex" id="details-list">
+        <div class="flex-container" id="details-list">
           <div class="semester-group" id="Fall-2026-group">
             <button type="button" class="collapsible-btn">Fall 2026</button>
 

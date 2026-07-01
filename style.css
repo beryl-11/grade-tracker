@@ -20,10 +20,13 @@
 }
 
 /* || General Styles */
+html {
+     border: 1px solid green;
+}
+
 body {
     background-color: var(--background-color);
-    min-width: 320px;
-    /*not working*/
+   
 }
 
 main {
@@ -33,7 +36,7 @@ main {
 main > header, section {
     max-width: 100%;
     margin: 2rem 0;
-    /* border: 1px solid red; */
+    border: 1px solid red;
 }
 
 button {
@@ -67,7 +70,7 @@ table {
 
 
 /* || Utilities */
-.flex {
+.flex-container {
     display: flex;
 }
 
@@ -88,6 +91,7 @@ table {
     background-color: orange;
     border: 4px solid green;
     border-radius: 50%;
+    max-width: 70%;
 }
 
 /* || Header and Main Navigation */
@@ -125,9 +129,10 @@ table {
 
 .semester-group {
     /* background-color: aquamarine; */
-    width: 90vw;
+    width: 90%;
     /*need to horizontal center*/
     font-size: 1.1rem;
+    border: 1px solid blue;
 }
 
 .collapsible-btn {
