@@ -12,7 +12,6 @@
     padding: 0;
     box-sizing: border-box;
     font-family: "Quicksand", sans-serif;
-    /* overflow-x: hidden; */
 }
 
 *:focus {
@@ -27,9 +26,14 @@ body {
     /*not working*/
 }
 
-section {
-    width: 100%;
-    padding: 1rem 2rem;
+main {
+    padding: 0 1.5rem;
+}
+
+main > header, section {
+    max-width: 100%;
+    margin: 2rem 0;
+    /* border: 1px solid red; */
 }
 
 button {
@@ -49,8 +53,6 @@ button:active {
 }
 
 hr {
-    width: 95%;
-    margin: 2.5%;
     border: 2px solid var(--focus-color);
     border-radius: 12px;
 }
@@ -82,9 +84,13 @@ table {
     margin-top: 0.5rem;
 }
 
+.box {
+    background-color: aquamarine;
+    border: 1px dashed green;
+}
 
 /* || Header and Main Navigation */
-header {
+.global-header {
     background-color: var(--accent-color);
     justify-content: space-around;
     padding: 1rem;
@@ -93,7 +99,7 @@ header {
     /* max-height: 10vh; */
 }
 
-header a {
+.global-header a {
     text-decoration: none;
     color: var(--text-color);
 }
@@ -102,7 +108,6 @@ header a {
 #intro {
     /* need to calc correctly and scalable */
     padding-bottom: 0;
-    width: 100vw;
 }
 
 /* Grade Details Section */
@@ -157,15 +162,9 @@ a:hover {
     color: var(--focus-color);
 }
 
-#grade-details .img-container {
-    border: 3px solid tan;
-    display: grid;
-    justify-content: center;
-}
-
-#grade-details img {
-    max-width: 100%;
-    /* height: auto; */
+#gpa-breakdown-graph {
+    width: 400px;
+    height: 400px;
 }
 
 /* || Toolbar */
