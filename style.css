@@ -21,19 +21,20 @@
 
 /* || General Styles */
 html {
-     border: 1px solid green;
+    border: 1px solid green;
 }
 
 body {
     background-color: var(--background-color);
-   
+
 }
 
 main {
     padding: 0 1.5rem;
 }
 
-main > header, section {
+main>header,
+section {
     max-width: 100%;
     margin: 2rem 0;
     border: 1px solid red;
@@ -91,7 +92,7 @@ table {
     background-color: orange;
     border: 4px solid green;
     border-radius: 50%;
-    max-width: 70%;
+    aspect-ratio: 1/1;
 }
 
 /* || Header */
@@ -116,20 +117,21 @@ table {
 }
 
 /* Grade Details Section */
-#grade-details {
-    padding-top: 0;
+@media (min-width: 440px) {
+    #grade-details-grid {
+        grid-template-columns: 1fr 1fr;
+    }
 }
 
 #details-list {
-    justify-content: center;
-    flex-wrap: wrap;
-    min-width: 320px;
-
+    justify-content: start;
+    align-items: center;
+    flex-direction: column;
+    border: 1px solid skyblue;
 }
 
 .semester-group {
-    /* background-color: aquamarine; */
-    width: 90%;
+    width: 100%;
     /*need to horizontal center*/
     font-size: 1.1rem;
     border: 1px solid blue;
@@ -169,8 +171,8 @@ a:hover {
 }
 
 #gpa-breakdown-graph {
-    width: 400px;
-    height: 400px;
+    max-width: 100%;
+    height: auto;
 }
 
 /* || Toolbar */
