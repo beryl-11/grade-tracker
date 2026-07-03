@@ -128,7 +128,7 @@ table:not(.collapsible-content) {
     width: 100%;
 }
 
-.global-header > div {
+.global-header>div {
     /* border: 1px solid black; */
     width: 50%;
 }
@@ -170,6 +170,23 @@ table:not(.collapsible-content) {
         grid-template-columns: 2fr 1fr;
         /* gap: 3rem; */
     }
+
+    .graph-wrapper {
+        /* border: 1px solid green; */
+        padding: 3rem 0 3rem 3rem;
+    }
+}
+
+@media screen and (max-width: 660px) {
+    .graph-wrapper {
+        /* border: 1px solid green; */
+        padding: 3rem;
+    }
+}
+
+#gpa-breakdown-graph {
+    max-width: 100%;
+    height: auto;
 }
 
 #details-list {
@@ -213,16 +230,6 @@ table:not(.collapsible-content) {
     width: 100%;
 }
 
-.graph-wrapper {
-    /* border: 1px solid green; */
-    padding: 3rem;
-}
-#gpa-breakdown-graph {
-    max-width: 100%;
-    height: auto;
-    /* width: 90%; */
-}
-
 /* || Toolbar */
 .toolbar {
     position: fixed;
@@ -242,4 +249,3 @@ table:not(.collapsible-content) {
     transform: scale(.95);
     transition: transform 0.3s ease;
 }
-
