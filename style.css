@@ -44,6 +44,10 @@ section {
     /* border: 1px solid red; */
 }
 
+svg {
+    display: block;
+}
+
 button {
     cursor: pointer;
     background-color: var(--accent-color);
@@ -103,6 +107,17 @@ table:not(.collapsible-content) {
     aspect-ratio: 1/1;
 }
 
+.icon {
+    stroke-width: 2;
+    color: currentColor;
+    aspect-ratio: 1/1;
+    min-width: 20px;
+}
+
+.icon:hover {
+    fill: currentColor;
+}
+
 /* || Global Header */
 .global-header {
     background-color: var(--accent-color);
@@ -121,14 +136,20 @@ table:not(.collapsible-content) {
     justify-content: flex-end;
     gap: 1rem;
 }
+
 .global-header a {
     text-decoration: none;
     color: var(--text-color);
 }
 
 .global-header-btn {
+    border-radius: 50%;
+    aspect-ratio: 1/1;
     background-color: var(--background-color);
-    padding: 5px 1rem;
+    padding: 8px;
+    /* align-items: center;
+    justify-content: center;
+    display: flex; */
 }
 
 /* Intro Section */
@@ -149,14 +170,14 @@ table:not(.collapsible-content) {
     justify-content: start;
     align-items: center;
     flex-direction: column;
-    border: 1px solid skyblue;
+    /* border: 1px solid skyblue; */
 }
 
 .semester-group {
     width: 100%;
     /*need to horizontal center*/
     font-size: 1.1rem;
-    border: 1px solid blue;
+    /* border: 1px solid blue; */
 }
 
 .collapsible-btn {
@@ -186,19 +207,8 @@ table:not(.collapsible-content) {
     width: 100%;
 }
 
-/* a.row-link {
-    grid-template-columns: 4fr auto;
-    text-decoration: none;
-    color: var(--text-color);
-    text-align: left;
-}
-
-a.row-link > span {
-    border: 1px solid green;
-} */
-
 .graph-wrapper {
-    border: 1px solid green;
+    /* border: 1px solid green; */
     padding: 3rem;
 }
 #gpa-breakdown-graph {
@@ -214,14 +224,16 @@ a.row-link > span {
     right: 20px;
 }
 
-#add-course-btn {
+.toolbar-btn {
     padding: 25%;
     min-width: 70px;
     min-height: 70px;
     border-radius: 50%;
+    aspect-ratio: 1/1;
 }
 
 #add-course-btn:active {
     transform: scale(.95);
     transition: transform 0.3s ease;
 }
+
