@@ -1,24 +1,24 @@
 {
     "Fall 2025": [
         {
-            "name": "F25C1", "credit": 4, "grade": "A+", "assignments": [
-                { "name": "Homework 1", "score": 95, "max": 100 },
-                { "name": "Midterm", "score": 88, "max": 100 }
+            "courseName": "F25C1", "credit": 4, "grade": "A+", "assignments": [
+                { "assignmentName": "Homework 1", "score": 95, "max": 100, "weight": 1 },
+                { "assignmentName": "Midterm", "score": 88, "max": 100, "weight": 1 }
             ]
         },
         {
-            "name": "F25C2", "credit": 2, "grade": "A-", "assignments": [
-                { "name": "Homework 1", "score": 95, "max": 100 },
-                { "name": "Midterm", "score": 88, "max": 100 }
+            "courseName": "F25C2", "credit": 2, "grade": "A-", "assignments": [
+                { "assignmentName": "Homework 1", "score": 95, "max": 100, "weight": 1 },
+                { "assignmentName": "Midterm", "score": 88, "max": 100, "weight": 1 }
             ]
         }
     ],
 
     "Spring 2026": [
         {
-            "name": "S26C1", "credit": 4, "grade": "A+", "assignments": [
-                { "name": "Homework 1", "score": 95, "max": 100 },
-                { "name": "Midterm", "score": 88, "max": 100 }
+            "courseName": "S26C1", "credit": 4, "grade": "A+", "assignments": [
+                { "assignmentName": "Homework 1", "score": 95, "max": 100, "weight": 1 },
+                { "assignmentName": "Midterm", "score": 88, "max": 100, "weight": 1 }
             ]
         }
     ]
