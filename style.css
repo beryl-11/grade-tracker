@@ -3,8 +3,8 @@
     --primary-color: rgb(192, 243, 228);
     --background-color: #F5F5F0;
     --accent-color: #E3E3B0;
-    --focus-color: #b0ad9b;
-    --text-color: black;
+    --focus-color: #98907c;
+    --text-color: #474036;
 }
 
 * {
@@ -22,7 +22,7 @@
 /* || General Styles */
 body {
     background-color: var(--background-color);
-
+    color: var(--text-color);
 }
 
 @media screen and (max-width: 500px) {
