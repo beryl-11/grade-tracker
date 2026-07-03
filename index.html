@@ -13,9 +13,13 @@
 
 <body>
   <header class="global-header flex-container">
-    <a href="index.html" id="logo">{Grade Tracker}</a>
-    <button type="button" class="btn" id="sign-in-btn">Sign In</button>
-
+    <div class="logo-wrapper">
+      <a href="index.html" id="logo">{Grade Tracker}</a>
+    </div>
+    <div class="header-btn-wrapper flex-container">
+      <button type="button" class="global-header-btn" id="settings-btn">Settings</button>
+      <button type="button" class="global-header-btn" id="sign-in-btn">Sign In</button>
+    </div>
   </header>
 
   <main>
@@ -34,12 +38,18 @@
           <div class="semester-group" id="Fall-2026-group">
             <button type="button" class="collapsible-btn">Fall 2026</button>
 
-            <div class="collapsible-content">
+            <div class="grid-container collapsible-content">
               <a class="row-link" href="F26C1.html">
                 <span class="course-name">F26C1</span><span class="course-grade">A+</span>
               </a>
               <a class="row-link" href="F26C1.html">
                 <span class="course-name">F26C2</span><span class="course-grade">A-</span>
+              </a>
+              <a class="row-link" href="F26C1.html">
+                <span class="course-name">F26C3</span><span class="course-grade">A</span>
+              </a>
+              <a class="row-link" href="F26C1.html">
+                <span class="course-name">F26C4</span><span class="course-grade">A</span>
               </a>
             </div>
           </div>
@@ -55,7 +65,9 @@
           </div>
         </div>
 
-        <div class="circle-placeholder" id="gpa-breakdown-graph"></div>
+        <div class="graph-wrapper">
+          <div class="circle-placeholder" id="gpa-breakdown-graph"></div>
+        </div>
       </div>
     </section>
 
