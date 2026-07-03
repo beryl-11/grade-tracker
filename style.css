@@ -5,6 +5,7 @@
     --accent-color: #E3E3B0;
     --focus-color: #98907c;
     --text-color: #474036;
+    --icon-color: #474036e2;
 }
 
 * {
@@ -109,13 +110,13 @@ table:not(.collapsible-content) {
 
 .icon {
     stroke-width: 2;
-    color: currentColor;
+    color: var(--icon-color);
     aspect-ratio: 1/1;
     min-width: 20px;
 }
 
 .icon:hover {
-    fill: currentColor;
+    fill: var(--icon-color);
 }
 
 /* || Global Header */
@@ -140,6 +141,11 @@ table:not(.collapsible-content) {
 .global-header a {
     text-decoration: none;
     color: var(--text-color);
+}
+
+.logo {
+    font-size: 1.3rem;
+    font-weight: 600;
 }
 
 .global-header-btn {
