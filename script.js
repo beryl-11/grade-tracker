@@ -23,34 +23,3 @@ const courses = {
         }
     ]
 };
-
-const courseNames = document.getElementById("course-names");
-
-courses.forEach(course => {
-    /* not working but attempting
-    courses.forEach(semester => {
-    const courseDiv1 = document.createElement("div");
-    courseDiv1.innerHTML = `<button>${semester}</button>`;
-    courseNames.appendChild(courseDiv1);
-    print(semester);
-    courses[semester].forEach(course => {
-        const courseDiv = document.createElement("div");
-
-        courseDiv.innerHTML = `
-            <h2 class="courseName"><a href="#${course.name}">${course.name} ${course.grade}</a></h2>
-            `;
-
-        courseNames.appendChild(courseDiv);
-    });
-});*/
-    const courseDiv = document.createElement("table");
-
-    courseDiv.innerHTML = `
-    <tr class="courseName">
-        <td><a href="#${course.name}">${course.name}</a></td>
-        <td>${course.grade}</td>
-        </tr>
-  `;
-
-    courseNames.appendChild(courseDiv);
-});
