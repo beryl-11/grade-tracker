@@ -21,7 +21,7 @@ const courses = {
                 { name: "Midterm", score: 88, max: 100 }
             ]
         }
-    ],
+    ]
 };
 
 const courseNames = document.getElementById("course-names");
