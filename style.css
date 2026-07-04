@@ -56,6 +56,7 @@ button {
     background-color: var(--accent-color);
     border: 3px solid var(--focus-color);
     border-radius: 1.5rem;
+    color: var(--text-color);
 }
 
 button:hover {
@@ -246,6 +247,7 @@ tr:nth-of-type(2n):not(.collapsible-content tr) {
     padding: 0.5em;
     text-align: left;
     font-size: 1.1em;
+    font-weight: 550;
     margin-top: 1rem;
 }
 
