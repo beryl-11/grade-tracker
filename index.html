@@ -53,7 +53,7 @@
           <div class="semester-group" id="Fall-2026-group">
             <button type="button" class="collapsible-btn">Fall 2026</button>
 
-            <table class="collapsible-content">
+            <table class="collapsible-content hidden">
               <tr data-href="./F26C1.html" class="row-link" href="F26C1.html">
                 <td class="course-name">F26C1</td>
                 <td class="course-grade">A+</td>
@@ -76,7 +76,7 @@
           <div class="semester-group" id="Spring-2026-group">
             <button type="button" class="collapsible-btn">Spring 2025</button>
 
-            <table class="collapsible-content">
+            <table class="collapsible-content hidden">
               <tr data-href="./F26C1.html" class="row-link" href="S26C1.html">
                 <td class="course-name">S25C1</td>
                 <td class="course-grade">A+</td>
@@ -85,6 +85,16 @@
           </div>
 
           <script>
+            /* Collapsible Content Script*/
+            let collapsibles = document.querySelectorAll(".collapsible-btn");
+            collapsibles.forEach((collapsible) => {
+              collapsible.addEventListener("click", function () {
+                collapsible.classList.toggle("expanded");
+                let content = collapsible.nextElementSibling;
+                content.classList.toggle("hidden");
+              })
+            })
+
             /* Link Table Rows Using JQuery */
             $(document).ready(function () {
               $(document.body).on("click", "tr[data-href]", function () {
