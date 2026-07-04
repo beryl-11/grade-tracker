@@ -45,7 +45,6 @@
     </header>
 
     <hr>
-    </hr>
 
     <section id="grade-details">
       <h1>Details</h1>
@@ -54,7 +53,7 @@
           <div class="semester-group" id="Fall-2026-group">
             <button type="button" class="collapsible-btn">Fall 2026</button>
 
-            <table class="collapsible-content hidden">
+            <table class="collapsible-content collapsed">
               <tr data-href="./F26C1.html" class="row-link" href="F26C1.html">
                 <td class="course-name">F26C1</td>
                 <td class="course-grade">A+</td>
@@ -77,7 +76,7 @@
           <div class="semester-group" id="Spring-2026-group">
             <button type="button" class="collapsible-btn">Spring 2025</button>
 
-            <table class="collapsible-content hidden">
+            <table class="collapsible-content collapsed">
               <tr data-href="./F26C1.html" class="row-link" href="S26C1.html">
                 <td class="course-name">S25C1</td>
                 <td class="course-grade">A+</td>
@@ -101,6 +100,26 @@
         </svg>
       </button>
     </aside>
+
+    <!-- Modals -->
+    <div class="modal hidden" id="settings-modal">
+      <button type="button" class="modal-exit-btn" aria-label="exit modal button">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+          class="icon">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+        </svg>
+
+      </button>
+      <div class="modal-header">
+        <h1>Settings</h1>
+      </div>
+
+      <hr>
+      <div class="modal-section">
+        <h2>Random Heading</h2>
+        <p>There is nothing to tweak.</p>
+      </div>
+    </div>
   </main>
 </body>
 

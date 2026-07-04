@@ -1,14 +1,24 @@
 // import courses from "./courses.json" with { type: "json" };
 
-// console.log(courses["Fall 2025"][0].name + " " + courses["Fall 2025"][0].grade);
+/* Settings */
+let settingsButton = document.getElementById("settings-btn"), settingsModal = document.getElementById("settings-modal");
+settingsButton.addEventListener("click", () => {
+    settingsModal.classList.remove("hidden");
+})
 
-/* Collapsible Content Script*/
+// modal exit buttons
+let exitButtons = document.querySelectorAll(".modal-exit-btn");
+exitButtons.forEach((button) => {
+    button.addEventListener("click", () => button.parentElement.classList.add("hidden"));
+})
+
+/* Collapsible Button and Content Script */
 let collapsibles = document.querySelectorAll(".collapsible-btn");
 collapsibles.forEach((collapsible) => {
     collapsible.addEventListener("click", function () {
         collapsible.classList.toggle("expanded");
         let content = collapsible.nextElementSibling;
-        content.classList.toggle("hidden");
+        content.classList.toggle("collapsed");
     })
 })
 

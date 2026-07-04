@@ -7,6 +7,7 @@
     --text-color: #474036;
     --icon-color: #474036e2;
     --highlight-color: #e3e3b085;
+    --shadow-color: #47403651;
 }
 
 * {
@@ -148,6 +149,10 @@ tr:nth-of-type(2n):not(.collapsible-content tr) {
     fill: var(--icon-color);
 }
 
+.collapsed {
+    display: none;
+}
+
 .hidden {
     display: none;
 }
@@ -161,7 +166,7 @@ tr:nth-of-type(2n):not(.collapsible-content tr) {
     width: 100%;
 }
 
-.global-header>div {
+.global-header > div {
     /* border: 1px solid black; */
     width: 50%;
 }
@@ -189,12 +194,6 @@ tr:nth-of-type(2n):not(.collapsible-content tr) {
     /* align-items: center;
     justify-content: center;
     display: flex; */
-}
-
-/* Intro Section */
-#intro {
-    /* need to calc correctly and scalable */
-    padding-bottom: 0;
 }
 
 /* Grade Details Section */
@@ -269,6 +268,7 @@ tr:nth-of-type(2n):not(.collapsible-content tr) {
     position: fixed;
     bottom: 20px;
     right: 20px;
+    z-index: 1;
 }
 
 .toolbar-btn {
@@ -282,4 +282,32 @@ tr:nth-of-type(2n):not(.collapsible-content tr) {
 #add-course-btn:active {
     transform: scale(.95);
     transition: transform 0.3s ease;
+}
+
+/* || Modals */
+.modal {
+    border: 3px solid var(--focus-color);
+    background-color: var(--background-color);
+    border-radius: 12px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    margin: 13vh 15% 9vh 15%;
+    width: 70%;
+    height: 76vh;
+    padding: 1.5rem;
+    overflow: auto;
+    box-shadow: 0 0 100vw var(--shadow-color);
+    /* display: none; */
+}
+
+.modal-header, .modal-section {
+    margin: 1rem 0;
+}
+.modal-exit-btn {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 8px;
 }
