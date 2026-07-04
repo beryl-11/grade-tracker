@@ -6,6 +6,7 @@
     --focus-color: #98907c;
     --text-color: #474036;
     --icon-color: #474036e2;
+    --highlight-color: #e3e3b085;
 }
 
 * {
@@ -65,7 +66,8 @@ button:active {
     transition: transform 0.3s ease;
 }
 
-a:hover, tr[data-href]:hover {
+a:hover,
+tr[data-href]:hover {
     color: var(--focus-color);
 }
 
@@ -79,11 +81,27 @@ hr {
 }
 
 table:not(.collapsible-content) {
-    border: 3px solid var(--focus-color);
-    border-radius: 12px;
-    padding: 1em;
-    width: 90%;
+    border-collapse: separate;
+    width: 100%;
     text-align: center;
+    border-spacing: 0;
+    border: 3.5px solid var(--focus-color);
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+thead:not(.collapsible-content thead) {
+    background-color: var(--accent-color);
+}
+
+
+th:not(.collapsible-content th), td:not(.collapsible-content td) {
+    padding: 1rem;
+}
+
+
+tr:nth-of-type(2n):not(.collapsible-content tr) {
+    background-color: var(--highlight-color);
 }
 
 
