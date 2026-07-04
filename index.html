@@ -9,6 +9,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
 </head>
 
 <body>
@@ -73,26 +74,23 @@
           </div>
 
           <div class="semester-group" id="Spring-2026-group">
-            <button type="button" class="collapsible-btn">Spring 2026</button>
+            <button type="button" class="collapsible-btn">Spring 2025</button>
 
             <table class="collapsible-content">
               <tr data-href="./F26C1.html" class="row-link" href="S26C1.html">
-                <td class="course-name">S26C1</td>
+                <td class="course-name">S25C1</td>
                 <td class="course-grade">A+</td>
               </tr>
             </table>
           </div>
 
           <script>
-            /* Link Table Rows */
-            document.addEventListener("DOMContentLoaded", () => {
-              const rows = document.querySelectorAll("tr[data-href]");
-              rows.forEach(row => {
-                row.addEventListener("click", () => {
-                  window.location.href = row.dataset.href;
-                })
-              })
-            })
+            /* Link Table Rows Using JQuery */
+            $(document).ready(function () {
+              $(document.body).on("click", "tr[data-href]", function () {
+                window.location.href = this.dataset.href;
+              });
+            });
           </script>
         </div>
 
