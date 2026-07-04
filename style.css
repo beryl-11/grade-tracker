@@ -25,6 +25,7 @@
 body {
     background-color: var(--background-color);
     color: var(--text-color);
+    overflow-x: hidden;
 }
 
 @media screen and (max-width: 500px) {
@@ -80,6 +81,17 @@ hr {
     border-radius: 12px;
 }
 
+/* table formatting */
+.table-wrapper {
+    max-width: 100%;
+}
+
+@media screen and (max-width: 525px) {
+    .table-wrapper {
+        overflow-x: scroll;
+    }
+}
+
 table:not(.collapsible-content) {
     border-collapse: separate;
     width: 100%;
@@ -103,7 +115,6 @@ th:not(.collapsible-content th), td:not(.collapsible-content td) {
 tr:nth-of-type(2n):not(.collapsible-content tr) {
     background-color: var(--highlight-color);
 }
-
 
 /* || Utilities */
 .flex-container {
@@ -209,6 +220,11 @@ tr:nth-of-type(2n):not(.collapsible-content tr) {
 #gpa-breakdown-graph {
     max-width: 100%;
     height: auto;
+}
+
+#gpa-breakdown-graph:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s ease-in-out;
 }
 
 #details-list {
