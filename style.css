@@ -16,11 +16,6 @@
     font-family: "Quicksand", sans-serif;
 }
 
-*:focus {
-    outline-color: var(--focus-color);
-    background-color: var(--focus-color);
-}
-
 /* || General Styles */
 body {
     background-color: var(--background-color);
@@ -225,11 +220,6 @@ tr:nth-of-type(2n):not(.collapsible-content tr) {
 #gpa-breakdown-graph {
     max-width: 100%;
     height: auto;
-}
-
-#gpa-breakdown-graph:hover {
-    transform: scale(1.05);
-    transition: transform 0.3s ease-in-out;
 }
 
 #details-list {
