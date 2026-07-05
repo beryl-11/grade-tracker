@@ -26,16 +26,16 @@ const courses = {
     ]
 }
 
-/*--------------------------------------------Start--------------------------------------------*/
+/*--------------------------------------------Code--------------------------------------------*/
 /* Function definitions */
-let isEmpty = (obj) => Object.keys(obj).length === 0;
+const isEmpty = (obj) => Object.keys(obj).length === 0;
 
 /* Inner HTML for home view */
-let gradeListContainer = document.getElementById("details-list");
+const gradeListContainer = document.getElementById("details-list");
 
 if (isEmpty(courses)) {
     /* TODO: Make this look better using CSS */
-    gradeListContainer.innerText = "Add a course to view the list.";
+    gradeListContainer.textContent = "No courses yet. Add a course to view details.";
 
 } else {
     for (const semester in courses) {
@@ -50,16 +50,16 @@ if (isEmpty(courses)) {
         newButton.classList.add("collapsible-btn");
         newButton.textContent = semester;
 
-        const newCollapsibleTable = document.createElement("table");
-        newCollapsibleTable.classList.add("collapsible-content", "collapsed");
+        const newCollapsibconstable = document.createElement("table");
+        newCollapsibconstable.classList.add("collapsible-content", "collapsed");
 
-        newSemesterGroup.append(newButton, newCollapsibleTable);
+        newSemesterGroup.append(newButton, newCollapsibconstable);
 
         // create the rows of the table
         courses[semester].forEach((course) => {
             const newRow = document.createElement("tr");
-            newRow.setAttribute("data-href", `#course-view/${course["courseName"]}`);
-            newCollapsibleTable.append(newRow);
+            newRow.setAttribute("data-href", `#course-view/${semester}/${course["courseName"]}`);
+            newCollapsibconstable.append(newRow);
 
             // row information
             const newRowCourseName = document.createElement("td"), newRowCourseGrade = document.createElement("td");
@@ -73,32 +73,34 @@ if (isEmpty(courses)) {
         })
     }
 }
+/*--------------------------------------End of Home View--------------------------------------*/
 
+/* Modals & Utilities */
 /* Settings */
-let settingsButton = document.getElementById("settings-btn"), settingsModal = document.getElementById("settings-modal");
+const settingsButton = document.getElementById("settings-btn"), settingsModal = document.getElementById("settings-modal");
 settingsButton.addEventListener("click", () => {
-    settingsModal.classList.remove("hidden");
+    settingsModal.showModal();
 
-    let exitButton = settingsModal.querySelector(".modal-exit-btn");
-    exitButton.addEventListener("click", () => settingsModal.classList.add("hidden"), { once: true });
+    const exitButton = settingsModal.querySelector(".modal-exit-btn");
+    exitButton.addEventListener("click", () => settingsModal.close(), { once: true });
 })
 
 /* Toolbar */
 // Add Course Button
-let addCourseButton = document.getElementById("add-course-btn"), addCourseModal = document.getElementById("add-course-modal");
+const addCourseButton = document.getElementById("add-course-btn"), addCourseModal = document.getElementById("add-course-modal");
 addCourseButton.addEventListener("click", () => {
-    addCourseModal.classList.remove("hidden");
+    addCourseModal.showModal();
 
-    let exitButton = addCourseModal.querySelector(".modal-exit-btn");
-    exitButton.addEventListener("click", () => addCourseModal.classList.add("hidden"), { once: true });
+    const exitButton = addCourseModal.querySelector(".modal-exit-btn");
+    exitButton.addEventListener("click", () => addCourseModal.close(),  { once: true });
 })
 
 /* Collapsible Button and Content Script */
-let collapsibles = document.querySelectorAll(".collapsible-btn");
+const collapsibles = document.querySelectorAll(".collapsible-btn");
 collapsibles.forEach((collapsible) => {
     collapsible.addEventListener("click", function () {
         collapsible.classList.toggle("expanded");
-        let content = collapsible.nextElementSibling;
+        const content = collapsible.nextElementSibling;
         content.classList.toggle("collapsed");
     })
 })
@@ -106,6 +108,11 @@ collapsibles.forEach((collapsible) => {
 /* Link Table Rows Using JQuery */
 $(document).ready(function () {
     $(document.body).on("click", "tr[data-href]", function () {
+        // load content based on path
+        document.getElementById("course-view-name").textContent = "afjaoiqnewj";
+        document.getElementById("course-view-grade").textContent = "A";
+
+        // switch the view
         document.getElementById("home-view").toggleAttribute("hidden");
         console.log(document.getElementById);
         document.getElementById("course-view").toggleAttribute("hidden");

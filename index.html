@@ -50,7 +50,7 @@
 
       <section id="grade-details">
         <h1>Details</h1>
-        
+
         <div class="grid-container" id="grade-details-grid">
           <div class="flex-container" id="details-list">
 
@@ -65,8 +65,8 @@
 
     <section hidden id="course-view">
       <header>
-        <h1 class="page-title">F26C1</h1>
-        <p class="overall-grade">Your estimated grade for this course is {A+}.</p>
+        <h1 class="page-title" id="course-view-name">{Course Name}</h1>
+        <p class="overall-grade">Your estimated grade for this course is <span id="course-view-grade">{N/A}</span>.</p>
       </header>
 
       <hr>
@@ -74,7 +74,7 @@
 
       <section>
         <div class="table-wrapper">
-          <table>
+          <table id="course-assignments">
             <thead>
               <tr>
                 <th>Assignment Name</th>
@@ -114,24 +114,6 @@
                 <td>0.5</td>
                 <td>80%</td>
               </tr>
-              <tr>
-                <td>Quiz</td>
-                <td>Assessments</td>
-                <td>0.5</td>
-                <td>80%</td>
-              </tr>
-              <tr>
-                <td>Quiz</td>
-                <td>Assessments</td>
-                <td>0.5</td>
-                <td>80%</td>
-              </tr>
-              <tr>
-                <td>Quiz</td>
-                <td>Assessments</td>
-                <td>0.5</td>
-                <td>80%</td>
-              </tr>
             </tbody>
           </table>
         </div>
@@ -148,7 +130,7 @@
     </aside>
 
     <!-- Modals -->
-    <div class="modal hidden" id="settings-modal">
+    <dialog class="modal" id="settings-modal">
       <button type="button" class="modal-exit-btn" aria-label="exit modal button">
         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
           class="icon">
@@ -166,8 +148,9 @@
         <h2>Random Heading</h2>
         <p>There is nothing to tweak.</p>
       </div>
-    </div>
-    <div class="modal hidden" id="add-course-modal">
+    </dialog>
+
+    <dialog class="modal" id="add-course-modal">
       <button type="button" class="modal-exit-btn" aria-label="exit modal button">
         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
           class="icon">
@@ -217,7 +200,7 @@
             <thead>
               <tr>
                 <!-- <th></th> -->
-                 <th></th>
+                <th></th>
                 <th>Component Name</th>
                 <th>Component Weight</th>
               </tr>
@@ -234,7 +217,7 @@
 
         <button type="submit">Add Course</button>
       </form>
-    </div>
+    </dialog>
   </main>
 </body>
 
