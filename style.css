@@ -36,7 +36,7 @@ body {
     }
 }
 
-main>header,
+section>header,
 section {
     max-width: 100%;
     margin: 2rem 0;
@@ -103,11 +103,9 @@ thead:not(.collapsible-content thead) {
     background-color: var(--accent-color);
 }
 
-
 th:not(.collapsible-content th), td:not(.collapsible-content td) {
     padding: 1rem;
 }
-
 
 tr:nth-of-type(2n):not(.collapsible-content tr) {
     background-color: var(--highlight-color);
