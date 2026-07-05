@@ -1,30 +1,30 @@
 // import courses from "./courses.json" with { type: "json" };
 // temp courses var to replace import statement
-const courses = {}
-//     "Fall 2025": [
-//         {
-//             "courseName": "F25C1", "credit": 4, "grade": "A+", "assignments": [
-//                 { "assignmentName": "Homework 1", "score": 95, "max": 100, "weight": 1 },
-//                 { "assignmentName": "Midterm", "score": 88, "max": 100, "weight": 1 }
-//             ]
-//         },
-//         {
-//             "courseName": "F25C2", "credit": 2, "grade": "A-", "assignments": [
-//                 { "assignmentName": "Homework 1", "score": 95, "max": 100, "weight": 1 },
-//                 { "assignmentName": "Midterm", "score": 88, "max": 100, "weight": 1 }
-//             ]
-//         }
-//     ],
+const courses = {
+    "Fall 2025": [
+        {
+            "courseName": "F25C1", "credit": 4, "grade": "A+", "assignments": [
+                { "assignmentName": "Homework 1", "score": 95, "max": 100, "weight": 1 },
+                { "assignmentName": "Midterm", "score": 88, "max": 100, "weight": 1 }
+            ]
+        },
+        {
+            "courseName": "F25C2", "credit": 2, "grade": "A-", "assignments": [
+                { "assignmentName": "Homework 1", "score": 95, "max": 100, "weight": 1 },
+                { "assignmentName": "Midterm", "score": 88, "max": 100, "weight": 1 }
+            ]
+        }
+    ],
 
-//     "Spring 2026": [
-//         {
-//             "courseName": "S26C1", "credit": 4, "grade": "A+", "assignments": [
-//                 { "assignmentName": "Homework 1", "score": 95, "max": 100, "weight": 1 },
-//                 { "assignmentName": "Midterm", "score": 88, "max": 100, "weight": 1 }
-//             ]
-//         }
-//     ]
-// }
+    "Spring 2026": [
+        {
+            "courseName": "S26C1", "credit": 4, "grade": "A+", "assignments": [
+                { "assignmentName": "Homework 1", "score": 95, "max": 100, "weight": 1 },
+                { "assignmentName": "Midterm", "score": 88, "max": 100, "weight": 1 }
+            ]
+        }
+    ]
+}
 
 /*--------------------------------------------Start--------------------------------------------*/
 /* Function definitions */
@@ -58,6 +58,7 @@ if (isEmpty(courses)) {
         // create the rows of the table
         courses[semester].forEach((course) => {
             const newRow = document.createElement("tr");
+            newRow.setAttribute("data-href", `#course-view/${course["courseName"]}`);
             newCollapsibleTable.append(newRow);
 
             // row information
@@ -108,6 +109,6 @@ $(document).ready(function () {
         document.getElementById("home-view").toggleAttribute("hidden");
         console.log(document.getElementById);
         document.getElementById("course-view").toggleAttribute("hidden");
-        // window.location.href = this.dataset.href;
+        window.location.href = this.dataset.href;
     });
 });
