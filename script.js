@@ -4,12 +4,9 @@
 let settingsButton = document.getElementById("settings-btn"), settingsModal = document.getElementById("settings-modal");
 settingsButton.addEventListener("click", () => {
     settingsModal.classList.remove("hidden");
-})
 
-// modal exit buttons
-let exitButtons = document.querySelectorAll(".modal-exit-btn");
-exitButtons.forEach((button) => {
-    button.addEventListener("click", () => button.parentElement.classList.add("hidden"));
+    let exitButton = settingsModal.querySelector(".modal-exit-btn");
+    exitButton.addEventListener("click", () => settingsModal.classList.add("hidden"), {once: true});
 })
 
 /* Collapsible Button and Content Script */

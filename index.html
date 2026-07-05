@@ -39,59 +39,135 @@
   </header>
 
   <main>
-    <header id="intro">
-      <h1 class="page-title">Hello, {name}.</h1>
-      <p class="overall-grade" id="overall-gpa-statement">Your estimated current GPA is {3.00}.</p>
-    </header>
+    <section id="home">
+      <header id="intro">
+        <h1 class="page-title">Hello, {name}.</h1>
+        <p class="overall-grade" id="overall-gpa-statement">Your estimated current GPA is {3.00}.</p>
+      </header>
 
-    <hr>
+      <hr>
 
-    <section id="grade-details">
-      <h1>Details</h1>
-      <div class="grid-container" id="grade-details-grid">
-        <div class="flex-container" id="details-list">
-          <div class="semester-group" id="Fall-2026-group">
-            <button type="button" class="collapsible-btn">Fall 2026</button>
+      <section id="grade-details">
+        <h1>Details</h1>
+        <div class="grid-container" id="grade-details-grid">
+          <div class="flex-container" id="details-list">
+            <div class="semester-group" id="Fall-2026-group">
+              <button type="button" class="collapsible-btn">Fall 2026</button>
 
-            <table class="collapsible-content collapsed">
-              <tr data-href="./F26C1.html" class="row-link" href="F26C1.html">
-                <td class="course-name">F26C1</td>
-                <td class="course-grade">A+</td>
-              </tr>
-              <tr data-href="./F26C1.html" class="row-link" href="F26C1.html">
-                <td class="course-name">F26C2</td>
-                <td class="course-grade">A-</td>
-              </tr>
-              <tr data-href="./F26C1.html" class="row-link" href="F26C1.html">
-                <td class="grid-container course-name">F26C3</td>
-                <td class="course-grade">A</td>
-              </tr>
-              <tr data-href="./F26C1.html" class="row-link" href="F26C1.html">
-                <td class="course-name">F26C4</td>
-                <td class="course-grade">A</td>
-              </tr>
-            </table>
+              <table class="collapsible-content collapsed">
+                <tr data-href="./F26C1.html" class="row-link" href="F26C1.html">
+                  <td class="course-name">F26C1</td>
+                  <td class="course-grade">A+</td>
+                </tr>
+                <tr data-href="./F26C1.html" class="row-link" href="F26C1.html">
+                  <td class="course-name">F26C2</td>
+                  <td class="course-grade">A-</td>
+                </tr>
+                <tr data-href="./F26C1.html" class="row-link" href="F26C1.html">
+                  <td class="grid-container course-name">F26C3</td>
+                  <td class="course-grade">A</td>
+                </tr>
+                <tr data-href="./F26C1.html" class="row-link" href="F26C1.html">
+                  <td class="course-name">F26C4</td>
+                  <td class="course-grade">A</td>
+                </tr>
+              </table>
+            </div>
+
+            <div class="semester-group" id="Spring-2026-group">
+              <button type="button" class="collapsible-btn">Spring 2025</button>
+
+              <table class="collapsible-content collapsed">
+                <tr data-href="./F26C1.html" class="row-link" href="S26C1.html">
+                  <td class="course-name">S25C1</td>
+                  <td class="course-grade">A+</td>
+                </tr>
+              </table>
+            </div>
+
           </div>
 
-          <div class="semester-group" id="Spring-2026-group">
-            <button type="button" class="collapsible-btn">Spring 2025</button>
-
-            <table class="collapsible-content collapsed">
-              <tr data-href="./F26C1.html" class="row-link" href="S26C1.html">
-                <td class="course-name">S25C1</td>
-                <td class="course-grade">A+</td>
-              </tr>
-            </table>
+          <div class="graph-wrapper">
+            <div class="circle-placeholder" id="gpa-breakdown-graph"></div>
           </div>
-
         </div>
-
-        <div class="graph-wrapper">
-          <div class="circle-placeholder" id="gpa-breakdown-graph"></div>
-        </div>
-      </div>
+      </section>
     </section>
 
+    <section id="course-view">
+      <header>
+        <h1 class="page-title">F26C1</h1>
+        <p class="overall-grade">Your estimated grade for this course is {A+}.</p>
+      </header>
+
+      <hr>
+      </hr>
+
+      <section>
+        <div class="table-wrapper">
+          <table>
+            <thead>
+              <tr>
+                <th>Assignment Name</th>
+                <th>Category</th>
+                <th>Weight</th>
+                <th>Grade</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Lab 0</td>
+                <td>Lab</td>
+                <td>1</td>
+                <td>100%</td>
+              </tr>
+              <tr>
+                <td>Lab 1</td>
+                <td>Lab</td>
+                <td>1</td>
+                <td>100%</td>
+              </tr>
+              <tr>
+                <td>Homework Assignment 1</td>
+                <td>Homework</td>
+                <td>1</td>
+                <td>98%</td>
+              </tr>
+              <tr>
+                <td>Quiz</td>
+                <td>Assessments</td>
+                <td>0.5</td>
+                <td>80%</td>
+              </tr>
+              <tr>
+                <td>Quiz</td>
+                <td>Assessments</td>
+                <td>0.5</td>
+                <td>80%</td>
+              </tr>
+              <tr>
+                <td>Quiz</td>
+                <td>Assessments</td>
+                <td>0.5</td>
+                <td>80%</td>
+              </tr>
+              <tr>
+                <td>Quiz</td>
+                <td>Assessments</td>
+                <td>0.5</td>
+                <td>80%</td>
+              </tr>
+              <tr>
+                <td>Quiz</td>
+                <td>Assessments</td>
+                <td>0.5</td>
+                <td>80%</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+    </section>
     <aside class="toolbar">
       <button type="button" class="toolbar-btn" id="add-course-btn" aria-label="Add Course">
         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"
