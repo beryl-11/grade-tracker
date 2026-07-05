@@ -228,7 +228,6 @@ tr:nth-of-type(2n):not(.collapsible-content tr) {
 
 .semester-group {
     width: 100%;
-    /*need to horizontal center*/
     font-size: 1.1rem;
     /* border: 1px solid blue; */
 }
@@ -308,4 +307,8 @@ tr:nth-of-type(2n):not(.collapsible-content tr) {
     top: 0;
     right: 0;
     margin: 8px;
+}
+
+.modal-table {
+    
 }
