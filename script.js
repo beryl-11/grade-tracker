@@ -81,8 +81,23 @@ const settingsButton = document.getElementById("settings-btn"), settingsModal = 
 settingsButton.addEventListener("click", () => {
     settingsModal.showModal();
 
+    // prevent background scroll
+
+    // exit button or on click
     const exitButton = settingsModal.querySelector(".modal-exit-btn");
     exitButton.addEventListener("click", () => settingsModal.close(), { once: true });
+
+    settingsModal.addEventListener("click", (e) => {
+        const rect = settingsModal.getBoundingClientRect();
+        if (
+            e.clientX < rect.left ||
+            e.clientX > rect.right ||
+            e.clientY < rect.top ||
+            e.clientY > rect.bottom
+        ) {
+            settingsModal.close();
+        }
+    });
 })
 
 /* Toolbar */
@@ -92,7 +107,7 @@ addCourseButton.addEventListener("click", () => {
     addCourseModal.showModal();
 
     const exitButton = addCourseModal.querySelector(".modal-exit-btn");
-    exitButton.addEventListener("click", () => addCourseModal.close(),  { once: true });
+    exitButton.addEventListener("click", () => addCourseModal.close(), { once: true });
 })
 
 /* Collapsible Button and Content Script */
