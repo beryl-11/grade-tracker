@@ -9,6 +9,16 @@ settingsButton.addEventListener("click", () => {
     exitButton.addEventListener("click", () => settingsModal.classList.add("hidden"), {once: true});
 })
 
+/* Toolbar */
+// Add Course Button
+let addCourseButton = document.getElementById("add-course-btn"), addCourseModal = document.getElementById("add-course-modal");
+addCourseButton.addEventListener("click", () => {
+    addCourseModal.classList.remove("hidden");
+
+    let exitButton = addCourseModal.querySelector(".modal-exit-btn");
+    exitButton.addEventListener("click", () => addCourseModal.classList.add("hidden"), {once: true});
+})
+
 /* Collapsible Button and Content Script */
 let collapsibles = document.querySelectorAll(".collapsible-btn");
 collapsibles.forEach((collapsible) => {
