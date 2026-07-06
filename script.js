@@ -30,6 +30,26 @@ const courses = {
 /* Function definitions */
 const isEmpty = (obj) => Object.keys(obj).length === 0;
 
+function exitModalButtonHandler(modal) {
+    modal.close();
+}
+
+function exitModalOutOfBoxHandler(modal) {
+    console.log("running exitModalOutofBoxHandler");
+
+    return function checkClickCoords(event) {
+        const rect = settingsModal.getBoundingClientRect();
+        if (
+            event.clientX < rect.left ||
+            event.clientX > rect.right ||
+            event.clientY < rect.top ||
+            event.clientY > rect.bottom
+        ) {
+            modal.close();
+        }
+    }
+}
+
 /* Inner HTML for home view */
 const gradeListContainer = document.getElementById("details-list");
 
@@ -77,32 +97,30 @@ if (isEmpty(courses)) {
 
 /* Modals & Utilities */
 /* Settings */
+
+// TODO: maybe use data-href to link button to modal and clean up the code a bit more
 const settingsButton = document.getElementById("settings-btn"), settingsModal = document.getElementById("settings-modal");
 settingsButton.addEventListener("click", () => {
     settingsModal.showModal();
 
     // prevent background scroll
     const body = document.querySelector("body");
-    console.log(body);
     body.style.overflow = "hidden";
 
     // exit button or on click
     const exitButton = settingsModal.querySelector(".modal-exit-btn");
-    exitButton.addEventListener("click", () => settingsModal.close(), { once: true });
-    settingsModal.addEventListener("click", (e) => {
-        const rect = settingsModal.getBoundingClientRect();
-        if (
-            e.clientX < rect.left ||
-            e.clientX > rect.right ||
-            e.clientY < rect.top ||
-            e.clientY > rect.bottom
-        ) {
-            settingsModal.close();
-            // TODO: need to remove event listener on exit button
-            body.style.overflow = "hidden auto"; // this works, but it would be great if the scroll bar doesn't get hidden or smt 
-            // AND need to enable scroll from exit on x or esc and not just empty space
-        }
-    });
+    exitButton.addEventListener("click", function exitModalButtonHandler() {
+        settingsModal.close();
+    }, { once: true });
+    const outofBoxInnerHandler = exitModalOutOfBoxHandler(settingsModal);
+    settingsModal.addEventListener("click", outofBoxInnerHandler);
+
+    settingsModal.addEventListener("close", () => {
+        exitButton.removeEventListener("click", exitModalButtonHandler);
+        settingsModal.removeEventListener("click", outofBoxInnerHandler);
+        body.style.overflow = "hidden auto";
+        console.log("cleanup done");
+    }, { once: true })
 })
 
 /* Toolbar */
@@ -134,7 +152,6 @@ $(document).ready(function () {
 
         // switch the view
         document.getElementById("home-view").toggleAttribute("hidden");
-        console.log(document.getElementById);
         document.getElementById("course-view").toggleAttribute("hidden");
         window.location.href = this.dataset.href;
     });
