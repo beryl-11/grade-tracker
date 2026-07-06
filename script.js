@@ -82,11 +82,13 @@ settingsButton.addEventListener("click", () => {
     settingsModal.showModal();
 
     // prevent background scroll
+    const body = document.querySelector("body");
+    console.log(body);
+    body.style.overflow = "hidden";
 
     // exit button or on click
     const exitButton = settingsModal.querySelector(".modal-exit-btn");
     exitButton.addEventListener("click", () => settingsModal.close(), { once: true });
-
     settingsModal.addEventListener("click", (e) => {
         const rect = settingsModal.getBoundingClientRect();
         if (
@@ -96,6 +98,9 @@ settingsButton.addEventListener("click", () => {
             e.clientY > rect.bottom
         ) {
             settingsModal.close();
+            // TODO: need to remove event listener on exit button
+            body.style.overflow = "hidden auto"; // this works, but it would be great if the scroll bar doesn't get hidden or smt 
+            // AND need to enable scroll from exit on x or esc and not just empty space
         }
     });
 })
