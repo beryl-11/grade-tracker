@@ -35,10 +35,10 @@ function exitModalButtonHandler(modal) {
 }
 
 function exitModalOutOfBoxHandler(modal) {
-    console.log("running exitModalOutofBoxHandler");
+    // console.log("running exitModalOutofBoxHandler");
 
     return function checkClickCoords(event) {
-        const rect = settingsModal.getBoundingClientRect();
+        const rect = modal.getBoundingClientRect();
         if (
             event.clientX < rect.left ||
             event.clientX > rect.right ||
@@ -50,7 +50,7 @@ function exitModalOutOfBoxHandler(modal) {
     }
 }
 
-/* Inner HTML for home view */
+/*---------------------------------------Create Home View---------------------------------------*/
 const gradeListContainer = document.getElementById("details-list");
 
 if (isEmpty(courses)) {
@@ -98,40 +98,42 @@ if (isEmpty(courses)) {
 /* Modals & Utilities */
 /* Settings */
 
-// TODO: maybe use data-href to link button to modal and clean up the code a bit more
-const settingsButton = document.getElementById("settings-btn"), settingsModal = document.getElementById("settings-modal");
-settingsButton.addEventListener("click", () => {
-    settingsModal.showModal();
-
-    // prevent background scroll
-    const body = document.querySelector("body");
-    body.style.overflow = "hidden";
+const modalButtons = document.querySelectorAll(".modal-open-btn");
+modalButtons.forEach((modalButton) => {
+    // retrieve correlating modal and show
+    const modal = document.getElementById(modalButton.dataset.href);
+    modalButton.addEventListener("click", () => {
+        modal.showModal();
+        document.body.style.overflow = "hidden";
+    })
 
     // exit button or on click
-    const exitButton = settingsModal.querySelector(".modal-exit-btn");
+    const exitButton = modal.querySelector(".modal-exit-btn");
     exitButton.addEventListener("click", function exitModalButtonHandler() {
-        settingsModal.close();
-    }, { once: true });
-    const outofBoxInnerHandler = exitModalOutOfBoxHandler(settingsModal);
-    settingsModal.addEventListener("click", outofBoxInnerHandler);
+        modal.close();
+    });
+    const outofBoxInnerHandler = exitModalOutOfBoxHandler(modal);
+    modal.addEventListener("click", outofBoxInnerHandler);
 
-    settingsModal.addEventListener("close", () => {
-        exitButton.removeEventListener("click", exitModalButtonHandler);
-        settingsModal.removeEventListener("click", outofBoxInnerHandler);
-        body.style.overflow = "hidden auto";
-        console.log("cleanup done");
-    }, { once: true })
+    // TODO: remove event listener on modal close 
+    modal.addEventListener("close", () => {
+        // exitButton.removeEventListener("click", exitModalButtonHandler);
+        // modal.removeEventListener("click", outofBoxInnerHandler);
+        document.body.style.overflow = "hidden auto";
+        // console.log("cleanup done");
+    })
 })
+
 
 /* Toolbar */
 // Add Course Button
-const addCourseButton = document.getElementById("add-course-btn"), addCourseModal = document.getElementById("add-course-modal");
-addCourseButton.addEventListener("click", () => {
-    addCourseModal.showModal();
+// const addCourseButton = document.getElementById("add-course-btn"), addCourseModal = document.getElementById("add-course-modal");
+// addCourseButton.addEventListener("click", () => {
+//     addCourseModal.showModal();
 
-    const exitButton = addCourseModal.querySelector(".modal-exit-btn");
-    exitButton.addEventListener("click", () => addCourseModal.close(), { once: true });
-})
+//     const exitButton = addCourseModal.querySelector(".modal-exit-btn");
+//     exitButton.addEventListener("click", () => addCourseModal.close(), { once: true });
+// })
 
 /* Collapsible Button and Content Script */
 const collapsibles = document.querySelectorAll(".collapsible-btn");
