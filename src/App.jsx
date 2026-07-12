@@ -2,14 +2,19 @@ import { useState } from 'react'
 import './App.css'
 import GlobalHeaderBar from './components/GlobalHeaderBar'
 import Home from './pages/Home'
-import GradeDetails from './pages/GradeDetails'
+import CourseDetails from './pages/CourseDetails'
+import { Route, Routes } from 'react-router-dom'
 
 function App() {
   return (
     <>
-    <GlobalHeaderBar/>
-    <Home/>
-    <GradeDetails/>
+      <GlobalHeaderBar />
+      <main>
+        <Routes>
+          <Route path='/' element={<Home />} />
+          <Route path='/details' element={<CourseDetails />} />
+        </Routes>
+      </main>
     </>
   )
 }

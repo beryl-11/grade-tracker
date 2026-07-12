@@ -1,7 +1,9 @@
+import { Link } from "react-router-dom"
+
 function GlobalHeaderBar() {
     return <header class="global-header flex-container">
     <div class="logo-wrapper">
-      <a href="/" class="logo">[Grade Tracker]</a>
+      <Link to="/">[Grade Tracker]</Link>
     </div>
 
     <div class="header-btn-wrapper flex-container">
