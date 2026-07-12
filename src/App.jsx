@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import './App.css'
+// import './App.css'
 import GlobalHeaderBar from './components/GlobalHeaderBar'
 import Home from './pages/Home'
 import CourseDetails from './pages/CourseDetails'
