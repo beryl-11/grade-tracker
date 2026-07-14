@@ -1,3 +1,5 @@
+import Collapsible from "../components/Collapsible"
+
 function Home() {
     return <section id="home">
          <header id="intro">
@@ -11,8 +13,9 @@ function Home() {
         <h1>Details</h1>
         
         <div className="grid-container" id="grade-details-grid">
-          <div className="flex-container" id="details-list"></div>
-
+          <div className="flex-container" id="details-list">
+            <Collapsible />
+          </div>
           <div className="graph-wrapper">
             <div className="circle-placeholder" id="gpa-breakdown-graph"></div>
           </div>
