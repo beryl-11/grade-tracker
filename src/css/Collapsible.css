@@ -1,0 +1,29 @@
+.collapsible {
+    width: 100%;
+    font-size: 1.1rem;
+    /* border: 1px solid blue; */
+}
+
+.collapsible-btn {
+    width: 100%;
+    padding: 0.5em;
+    text-align: left;
+    font-size: 1.2em;
+    font-weight: 550;
+    margin: 1rem 0 0.5rem 0;
+}
+
+.collapsible-btn::before {
+    content: "+ ";
+}
+
+/* need way for this to stay on when toggled */
+.collapsible-btn.expanded::before {
+    content: "- ";
+}
+
+.collapsible-content {
+    margin: 0.5em 2em;
+    font-size: 1em;
+    text-align: left;
+}
