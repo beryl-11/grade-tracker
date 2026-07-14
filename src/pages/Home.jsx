@@ -1,4 +1,4 @@
-import Collapsible from "../components/Collapsible"
+import Collapsible from "../components/Collapsible/Collapsible"
 
 function Home() {
     return <section id="home">
