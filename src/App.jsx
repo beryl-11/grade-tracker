@@ -5,6 +5,7 @@ import GlobalHeaderBar from './components/GlobalHeaderBar'
 import Home from './pages/Home'
 import CourseDetails from './pages/CourseDetails'
 import { Route, Routes } from 'react-router-dom'
+import QuickActionToolbar from './components/QuickActionToolbar'
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
           <Route path='/details' element={<CourseDetails />} />
         </Routes>
       </main>
+      <QuickActionToolbar />
     </>
   )
 }
