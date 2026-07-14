@@ -149,10 +149,6 @@ tr:nth-of-type(2n):not(.collapsible-content tr) {
     fill: var(--icon-color);
 }
 
-.collapsed {
-    display: none;
-}
-
 /* || Global Header */
 .global-header {
     background-color: var(--accent-color);
