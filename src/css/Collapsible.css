@@ -17,7 +17,6 @@
     content: "+ ";
 }
 
-/* need way for this to stay on when toggled */
 .collapsible-btn.expanded::before {
     content: "- ";
 }
