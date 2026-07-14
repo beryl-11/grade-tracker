@@ -1,14 +1,16 @@
-import "../../css/Collapsible.css"
-import { Link } from "react-router-dom"
+import "../../css/Collapsible.css";
+import { Link } from "react-router-dom";
 import ClickableTableRow from "./ClickableTableRow";
 
-function Collapsible() {
+function Collapsible(props) {
+    const { semester, courseList } = props;
+
     return <div className="collapsible">
-        <button type="button" className="collapsible-btn">Collapsible Button</button>
+        <button type="button" className="collapsible-btn">{semester}</button>
         <table className="collapsible-content">
-            <ClickableTableRow courseName="Course 1" courseGrade="A+"/>
-            <ClickableTableRow courseName="Course 2" courseGrade="A"/>
-            <ClickableTableRow courseName="Course 3" courseGrade="A-"/>
+            <tbody>
+                {courseList.map((courseObject) => <ClickableTableRow key={courseObject.courseName} courseName={courseObject.courseName} courseGrade={courseObject.grade} />)}
+            </tbody>
         </table>
     </div>
 }
