@@ -21,7 +21,7 @@ function Collapsible(props) {
         <button type="button" className="collapsible-btn" onClick={toggleCollapsible}>{semester}</button>
         <table className={`collapsible-content ${collapsibleState}`}>
             <tbody>
-                {courseList.map((courseObject) => <ClickableTableRow key={courseObject.courseName} courseName={courseObject.courseName} courseGrade={courseObject.grade} />)}
+                {courseList.map((courseObject) => <ClickableTableRow key={courseObject.courseName} courseId={courseObject.courseId} courseName={courseObject.courseName} courseGrade={courseObject.grade} />)}
             </tbody>
         </table>
     </div>
