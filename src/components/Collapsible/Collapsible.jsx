@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import ClickableTableRow from "./ClickableTableRow";
 
 function Collapsible(props) {
+    // TODO: Make function toggle the collapsible (perhaps using states)
     function collapsibleHandler() {
         alert("collapse toggle")
     }

@@ -5,7 +5,7 @@ import GlobalHeaderBar from './components/GlobalHeaderBar'
 import Home from './pages/Home'
 import CourseDetails from './pages/CourseDetails'
 import { Route, Routes } from 'react-router-dom'
-import QuickActionToolbar from './components/QuickActionToolbar'
+import QuickActionToolbar from './components/QuickActions/QuickActionToolbar'
 
 function App() {
   return (
