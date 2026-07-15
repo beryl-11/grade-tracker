@@ -31,7 +31,7 @@
     display: none;
 }
 
-tr:hover {
+.collapsible tr:hover {
     cursor: pointer;
     color: var(--focus-color);
 }
