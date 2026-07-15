@@ -1,6 +1,7 @@
 import { Outlet } from "react-router-dom"
 import GlobalHeaderBar from "./components/GlobalHeaderBar"
 import QuickActionToolbar from "./components/QuickActions/QuickActionToolbar"
+import './css/style.css'
 
 function Layout() {
     return <>
