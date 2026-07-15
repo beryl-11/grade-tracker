@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap');
+
 /* || UNIVERSAL STYLES */
 :root {
     --primary-color: rgb(192, 243, 228);
@@ -105,7 +107,8 @@ thead:not(.collapsible-content thead) {
     background-color: var(--accent-color);
 }
 
-th:not(.collapsible-content th), td:not(.collapsible-content td) {
+th:not(.collapsible-content th),
+td:not(.collapsible-content td) {
     padding: 1rem;
 }
 
@@ -158,7 +161,7 @@ tr:nth-of-type(2n):not(.collapsible-content tr) {
     width: 100%;
 }
 
-.global-header > div {
+.global-header>div {
     /* border: 1px solid black; */
     width: 50%;
 }
@@ -259,9 +262,11 @@ tr:nth-of-type(2n):not(.collapsible-content tr) {
     overflow-x: hidden;
 }
 
-.modal-header, .modal-section {
+.modal-header,
+.modal-section {
     margin: 1rem 0;
 }
+
 .modal-exit-btn {
     position: absolute;
     top: 0;
@@ -273,6 +278,7 @@ tr:nth-of-type(2n):not(.collapsible-content tr) {
     max-width: 50%;
 }
 
-.modal th, .modal td {
+.modal th,
+.modal td {
     padding: 0;
 }
