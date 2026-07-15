@@ -30,3 +30,8 @@
 .collapsed {
     display: none;
 }
+
+tr:hover {
+    cursor: pointer;
+    color: var(--focus-color);
+}
