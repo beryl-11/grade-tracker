@@ -47,7 +47,8 @@ function Home() {
 
       <div className="grid-container" id="grade-details-grid">
         <div className="flex-container" id="details-list">
-          {courses.map((semesterGroup) => <Collapsible key={semesterGroup.semester} semester={semesterGroup.semester} courseList={semesterGroup.courseList} />)}
+          {(courses) && courses.map((semesterGroup) => <Collapsible key={semesterGroup.semester} semester={semesterGroup.semester} courseList={semesterGroup.courseList} />)}
+          {(courses.length === 0) && <p className="empty-course-details-view">No courses yet. Add a course using the "+" in the bottom right of the screen to get started.</p>}
         </div>
         <div className="graph-wrapper">
           <div className="circle-placeholder" id="gpa-breakdown-graph"></div>
