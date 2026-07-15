@@ -14,6 +14,13 @@
             { "assignmentName": "Homework 1", "score": 95, "max": 100, "weight": 1 },
             { "assignmentName": "Midterm", "score": 88, "max": 100, "weight": 1 }
           ]
+        },
+        {
+          "courseName": "F25C3: For the Third Time", "credit": 4, "grade": "B", "assignments":
+            [
+              { "assignmentName": "Homework 1", "score": 95, "max": 100, "weight": 1 },
+              { "assignmentName": "Midterm", "score": 88, "max": 100, "weight": 1 }
+            ]
         }
       ]
     },
