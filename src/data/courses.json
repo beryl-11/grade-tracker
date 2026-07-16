@@ -10,12 +10,14 @@
         "assignments": [
           {
             "assignmentName": "Homework 1",
+            "category": "Homework",
             "score": 95,
             "max": 100,
             "weight": 1
           },
           {
             "assignmentName": "Midterm",
+            "category": "Assessments",
             "score": 88,
             "max": 100,
             "weight": 1
