@@ -17,7 +17,7 @@
     content: "+ ";
 }
 
-.collapsible-btn.expanded::before {
+.collapsible:has(.expanded) > .collapsible-btn::before {
     content: "- ";
 }
 

@@ -4,11 +4,11 @@ import { useState } from "react";
 import ClickableTableRow from "./ClickableTableRow";
 
 function Collapsible(props) {
-    const [collapsedState, setCollapsedState] = useState(false);
+    const [collapsedState, setCollapsedState] = useState("expanded");
 
     //TODO: Find more elegant way of toggling states
     function toggleCollapsible() {
-        setCollapsedState(prevState => !prevState);
+        setCollapsedState(prevState => (prevState === "collapsed" ? "expanded" : "collapsed"));
     }
 
     const { semester, courseList } = props;
@@ -16,7 +16,7 @@ function Collapsible(props) {
     return <div className="collapsible">
         <button type="button" className="collapsible-btn" onClick={toggleCollapsible}>{semester}</button>
 
-        <div className={`collapsible-content${collapsedState ? " collapsed" : ""}`}>
+        <div className={`collapsible-content ${collapsedState}`}>
             <table>
                 <tbody>
                     {courseList.map((courseObject) => {
