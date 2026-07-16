@@ -1,7 +1,11 @@
-function CourseDetails() {
+import { useParams } from "react-router-dom";
+
+export default function CourseDetails() {
+    const params = useParams();
+
     return <section id="grade-details">
         <header>
-            <h1 className="page-title" id="course-view-name">[CourseName]</h1>
+            <h1 className="page-title" id="course-view-name">{params.courseId}</h1>
             <p className="overall-grade">Your estimated grade for this course is <span id="course-view-grade">[1231]</span>.</p>
         </header>
 
@@ -55,5 +59,3 @@ function CourseDetails() {
         </section>
     </section>
 }
-
-export default CourseDetails

@@ -3,24 +3,25 @@
     "semester": "Spring 2026",
     "courseList": [
       {
-        "courseName": "S26C1: First Course of the Spring Semester",
-        "courseId": "S26C1",
-        "credit": 4,
-        "grade": "A+",
-        "assignments": [
-          {
-            "assignmentName": "Homework 1",
-            "score": 95,
-            "max": 100,
-            "weight": 1
-          },
-          {
-            "assignmentName": "Midterm",
-            "score": 88,
-            "max": 100,
-            "weight": 1
-          }
-        ]
+        "S26C1": {
+          "courseName": "S26C1: First Course of the Spring Semester",
+          "credit": 4,
+          "grade": "A+",
+          "assignments": [
+            {
+              "assignmentName": "Homework 1",
+              "score": 95,
+              "max": 100,
+              "weight": 1
+            },
+            {
+              "assignmentName": "Midterm",
+              "score": 88,
+              "max": 100,
+              "weight": 1
+            }
+          ]
+        }
       }
     ]
   },
@@ -28,64 +29,68 @@
     "semester": "Fall 2025",
     "courseList": [
       {
-        "courseName": "F25C1: Introduction to Fall 2025",
-        "courseId": "F25C1",
-        "credit": 4,
-        "grade": "A+",
-        "assignments": [
-          {
-            "assignmentName": "Homework 1",
-            "score": 95,
-            "max": 100,
-            "weight": 1
-          },
-          {
-            "assignmentName": "Midterm",
-            "score": 88,
-            "max": 100,
-            "weight": 1
-          }
-        ]
+        "F25C1": {
+          "courseName": "F25C1: Introduction to Fall 2025",
+          "credit": 4,
+          "grade": "A+",
+          "assignments": [
+            {
+              "assignmentName": "Homework 1",
+              "score": 95,
+              "max": 100,
+              "weight": 1
+            },
+            {
+              "assignmentName": "Midterm",
+              "score": 88,
+              "max": 100,
+              "weight": 1
+            }
+          ]
+        }
       },
       {
-        "courseName": "F25C2: Another Fall Semester Course",
-        "courseId": "F25C2",
-        "credit": 2,
-        "grade": "A-",
-        "assignments": [
-          {
-            "assignmentName": "Homework 1",
-            "score": 95,
-            "max": 100,
-            "weight": 1
-          },
-          {
-            "assignmentName": "Midterm",
-            "score": 88,
-            "max": 100,
-            "weight": 1
-          }
-        ]
+        "F25C2": {
+          "courseName": "F25C2: Another Fall Semester Course",
+          "credit": 2,
+          "grade": "A-",
+          "assignments": [
+            {
+              "assignmentName": "Homework 1",
+              "score": 95,
+              "max": 100,
+              "weight": 1
+            },
+            {
+              "assignmentName": "Midterm",
+              "score": 88,
+              "max": 100,
+              "weight": 1
+            }
+          ]
+        }
       },
       {
-        "courseName": "F25C3: For the Third Time",
-        "courseId": "F25C3",
-        "credit": 4,
-        "grade": "B",
-        "assignments": [
-          {
-            "assignmentName": "Homework 1",
-            "score": 95,
-            "max": 100,
-            "weight": 1
-          },
-          {
-            "assignmentName": "Midterm",
-            "score": 88,
-            "max": 100,
-            "weight": 1
-          }
-        ]
+        "F25C3": {
+          "courseName": "F25C3: For the Third Time",
+          "courseId": "F25C3",
+          "credit": 4,
+          "grade": "B",
+          "assignments": [
+            {
+              "assignmentName": "Homework 1",
+              "score": 95,
+              "max": 100,
+              "weight": 1
+            },
+            {
+              "assignmentName": "Midterm",
+              "score": 88,
+              "max": 100,
+              "weight": 1
+            }
+          ]
+        }
       }
     ]
   }

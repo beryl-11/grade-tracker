@@ -19,9 +19,19 @@ function Collapsible(props) {
 
     return <div className="collapsible">
         <button type="button" className="collapsible-btn" onClick={toggleCollapsible}>{semester}</button>
+
         <table className={`collapsible-content ${collapsibleState}`}>
             <tbody>
-                {courseList.map((courseObject) => <ClickableTableRow key={courseObject.courseName} courseId={courseObject.courseId} courseName={courseObject.courseName} courseGrade={courseObject.grade} />)}
+                {courseList.map((courseObject) => {
+                    const currId = Object.keys(courseObject)[0];
+
+                    return <ClickableTableRow
+                        key={currId}
+                        courseId={currId}
+                        courseName={courseObject[currId].courseName}
+                        courseGrade={courseObject[currId].grade}
+                    />
+                })}
             </tbody>
         </table>
     </div>
