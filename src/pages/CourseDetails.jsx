@@ -1,7 +1,7 @@
 import { useParams } from "react-router-dom";
 
 export default function CourseDetails() {
-    const params = useParams();
+    const params = useParams(); // TODO: Use the course ID to access the name, grade, and assignments associated with the course
 
     return <section id="grade-details">
         <header>
