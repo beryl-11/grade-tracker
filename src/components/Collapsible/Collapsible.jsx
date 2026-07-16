@@ -20,13 +20,13 @@ function Collapsible(props) {
             <table>
                 <tbody>
                     {courseList.map((courseObject) => {
-                        const currId = Object.keys(courseObject)[0];
-
+                        const currId = courseObject.courseId;
                         return <ClickableTableRow
                             key={currId}
                             courseId={currId}
-                            courseName={courseObject[currId].courseName}
-                            courseGrade={courseObject[currId].grade}
+                            semester={semester}
+                            courseName={courseObject.courseName}
+                            courseGrade={courseObject.grade}
                         />
                     })}
                 </tbody>

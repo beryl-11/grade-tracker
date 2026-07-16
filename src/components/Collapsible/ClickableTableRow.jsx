@@ -4,7 +4,7 @@ function ClickableTableRow(props) {
     const navigate = useNavigate();
     
     function rowClickHandler() {
-        navigate(`/details/${props.courseId}`);
+        navigate(`/details/${props.semester}/${props.courseId}`);
     }
 
     return <tr onClick={rowClickHandler}>

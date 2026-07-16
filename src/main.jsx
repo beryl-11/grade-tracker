@@ -13,7 +13,7 @@ const router = createBrowserRouter([
     errorElement: <NotFound />,
     children: [
       { index: true, element: <Home /> },
-      { path: "details/:courseId", element: <CourseDetails /> }
+      { path: "details/:semester/:courseId", element: <CourseDetails /> }
     ]
   }
 ]);

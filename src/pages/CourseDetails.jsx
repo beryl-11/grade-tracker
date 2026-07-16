@@ -1,12 +1,15 @@
 import { useParams } from "react-router-dom";
+import courses from "../data/courses.json"
 
 export default function CourseDetails() {
     const params = useParams(); // TODO: Use the course ID to access the name, grade, and assignments associated with the course
+    const semester = params.semester, courseId = params.courseId;
+    const courseToDisplay = courses.find((semesterGroup) => semesterGroup.semester === semester).courseList.find((course) => course.courseId === courseId);
 
     return <section id="grade-details">
         <header>
-            <h1 className="page-title" id="course-view-name">{params.courseId}</h1>
-            <p className="overall-grade">Your estimated grade for this course is <span id="course-view-grade">[1231]</span>.</p>
+            <h1 className="page-title" id="course-view-name">{courseToDisplay.courseName}</h1>
+            <p className="overall-grade">Your estimated grade for this course is {courseToDisplay.grade}.</p>
         </header>
 
         <hr />
