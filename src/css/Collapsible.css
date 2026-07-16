@@ -24,14 +24,14 @@
 .collapsible-content {
     display: grid;
     grid-template-rows: 1fr;
-    transition: all 0.5s ease;
+    transition: all 0.35s;
     margin: 0.5em 2em;
     overflow: hidden;
 }
 
 .collapsed {
     grid-template-rows: 0fr;
-    transition: all 0.5s ease;
+    transition: all 0.35s;
     margin: 0 2em;
 }
 
