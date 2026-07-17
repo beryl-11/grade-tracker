@@ -14,7 +14,7 @@ function Collapsible(props) {
     const { semester, courseList } = props;
 
     return <div className="collapsible">
-        <button type="button" className="collapsible-btn" onClick={toggleCollapsible}>{semester}</button>
+        <button type="button" className="collapsible-btn" onClick={toggleCollapsible}>{semester.replace("-", " ")}</button>
 
         <div className={`collapsible-content ${collapsedState}`}>
             <table>
