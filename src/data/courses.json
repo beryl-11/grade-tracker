@@ -36,13 +36,15 @@
         "grade": "A+",
         "assignments": [
           {
-            "assignmentName": "Homework 1",
+            "assignmentName": "Pre-test",
+            "category": "Assessments",
             "score": 95,
             "max": 100,
             "weight": 1
           },
           {
-            "assignmentName": "Midterm",
+            "assignmentName": "Midterm 1",
+            "category": "Assessments",
             "score": 88,
             "max": 100,
             "weight": 1
@@ -56,13 +58,15 @@
         "grade": "A-",
         "assignments": [
           {
-            "assignmentName": "Homework 1",
+            "assignmentName": "Participation 7/28",
+            "category": "Participation",
             "score": 95,
             "max": 100,
             "weight": 1
           },
           {
             "assignmentName": "Midterm",
+            "category": "Assessments",
             "score": 88,
             "max": 100,
             "weight": 1
@@ -76,14 +80,23 @@
         "grade": "B",
         "assignments": [
           {
-            "assignmentName": "Homework 1",
+            "assignmentName": "Reading",
+            "category": "Homework",
             "score": 95,
             "max": 100,
             "weight": 1
           },
           {
-            "assignmentName": "Midterm",
+            "assignmentName": "Final",
+            "category": "Assessments",
             "score": 88,
+            "max": 100,
+            "weight": 1
+          },
+          {
+            "assignmentName": "Individual Project",
+            "category": "Assessments",
+            "score": 100,
             "max": 100,
             "weight": 1
           }
