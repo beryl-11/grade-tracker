@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom"
 
-function GlobalHeaderBar() {
+export default function GlobalHeaderBar() {
     return <header className="global-header flex-container">
     <div className="logo-wrapper">
       <Link to="/">[Grade Tracker]</Link>
@@ -26,4 +26,3 @@ function GlobalHeaderBar() {
   </header>
 }
 
-export default GlobalHeaderBar
