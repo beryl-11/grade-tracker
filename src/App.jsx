@@ -9,14 +9,14 @@ import QuickActionToolbar from './components/QuickActions/QuickActionToolbar'
 function App() {
   return (
     <>
-      <GlobalHeaderBar />
+      
       <main>
         <Routes>
           <Route path='/' element={<Home />} />
           <Route path='/details' element={<CourseDetails />} />
         </Routes>
       </main>
-      <QuickActionToolbar />
+    
     </>
   )
 }

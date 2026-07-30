@@ -2,6 +2,7 @@ import { Outlet } from "react-router-dom"
 import GlobalHeaderBar from "./components/GlobalHeaderBar"
 import QuickActionToolbar from "./components/QuickActions/QuickActionToolbar"
 import './css/style.css' // do something about this
+import Modal from "./modals/Modal"
 
 function Layout() {
     return <>
@@ -10,6 +11,8 @@ function Layout() {
         <Outlet />
       </main>
       <QuickActionToolbar />
+      
+      <div id="overlays"></div>
     </>
 }
 
