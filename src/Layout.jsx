@@ -5,15 +5,17 @@ import './css/style.css' // do something about this
 import Modal from "./modals/Modal"
 
 function Layout() {
-    return <>
+  return <>
+    <div id="root">
       <GlobalHeaderBar />
       <main>
         <Outlet />
       </main>
       <QuickActionToolbar />
-      
-      <div id="overlays"></div>
-    </>
+    </div>
+
+    <div id="overlays"></div>
+  </>
 }
 
 export default Layout
