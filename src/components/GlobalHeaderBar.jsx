@@ -10,7 +10,7 @@ export default function GlobalHeaderBar() {
       </div>
 
       <div className="header-btn-wrapper flex-container">
-        <ModalOpenButton />
+        <ModalOpenButton className="global-header-btn" />  {/* TODO: Fix style of global header buttons*/}
       </div>
     </header>
     </>
