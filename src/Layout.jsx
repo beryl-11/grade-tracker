@@ -2,19 +2,17 @@ import { Outlet } from "react-router-dom"
 import GlobalHeaderBar from "./components/GlobalHeaderBar"
 import QuickActionToolbar from "./components/QuickActions/QuickActionToolbar"
 import './css/style.css' // do something about this
-import Modal from "./modals/Modal"
+import ModalLayout from "./modals/Modal"
+import ModalContainer from "./modals/ModalContainer"
 
 function Layout() {
   return <>
-    <div id="root">
       <GlobalHeaderBar />
       <main>
         <Outlet />
       </main>
       <QuickActionToolbar />
-    </div>
-
-    <div id="overlays"></div>
+      <ModalContainer />
   </>
 }
 

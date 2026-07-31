@@ -1,5 +1,5 @@
 export default function Modal() {
-    return <dialog class="modal" id="settings-modal">
+    return <div class="modal" id="modal-container">
         <button type="button" class="modal-exit-btn" aria-label="exit modal button">
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
                 class="icon">
@@ -8,15 +8,15 @@ export default function Modal() {
         </button>
 
         <div class="modal-header">
-            <h1>Settings</h1>
+            <h1>Header</h1>
         </div>
 
         <hr />
 
         <div class="modal-section">
             <h2>Random Heading</h2>
-            <p>There is nothing to tweak.</p>
+            <p>Some paragraph should be here.</p>
         </div>
-    </dialog>
+    </div>
 
 }
