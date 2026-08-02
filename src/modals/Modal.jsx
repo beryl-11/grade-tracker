@@ -1,8 +1,7 @@
 import { useModalContext } from "../components/ModalManager"
 
-export default function Modal() {
-    console.log(useModalContext())
-    return <div class="modal" id="modal-container">
+export function Modal() {
+    return <div class="modal" id="template-modal">
         <button type="button" class="modal-exit-btn" aria-label="exit modal button">
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
                 class="icon">

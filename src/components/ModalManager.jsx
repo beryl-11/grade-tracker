@@ -10,7 +10,7 @@ export function ModalContextProvider({ children }) {
     const openModal = (modalName) => setModalState("open");
     const closeModal = () => setModalState("closed");
 
-    return <ModalContext.Provider value={modalState}>
+    return <ModalContext.Provider value={{modalState, openModal, closeModal}}>
         {children}
     </ModalContext.Provider>
 }
