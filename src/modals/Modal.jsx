@@ -1,6 +1,6 @@
 import { useModalContext } from "../components/ModalManager"
 
-export function Modal() {
+function ModalTemplate({ children }) {
     return <div className="modal" id="template-modal">
         <button type="button" className="modal-exit-btn" aria-label="exit modal button">
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
@@ -8,9 +8,15 @@ export function Modal() {
                 <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
             </svg>
         </button>
-        {/* TODO: Delete the following dummy text and move them to a modal content component or something similar. */}
+        {children}
+    </div>
+
+}
+
+export function SettingsModal() {
+    return <ModalTemplate>
         <div className="modal-header">
-            <h1>Header</h1>
+            <h1>Settings</h1>
         </div>
 
         <hr />
@@ -19,6 +25,13 @@ export function Modal() {
             <h2>Random Heading</h2>
             <p>Some paragraph should be here.</p>
         </div>
-    </div>
+    </ModalTemplate>
+}
 
+export function AddCourseModal() {
+    return <ModalTemplate>
+        <div className="modal-header">
+            <h1>Add Course</h1>
+        </div>
+    </ModalTemplate>
 }
