@@ -1,5 +1,3 @@
-import { useModalContext } from "../components/ModalManager"
-
 function ModalTemplate({ children }) {
     return <div className="modal" id="template-modal">
         <button type="button" className="modal-exit-btn" aria-label="exit modal button">
