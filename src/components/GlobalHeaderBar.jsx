@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom"
-import ModalOpenButton from "../modals/ModalOpenButton"
+import ModalOpenButton from "./Modals/ModalOpenButton"
 
 export default function GlobalHeaderBar() {
   return <>

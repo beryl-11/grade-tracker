@@ -1,7 +1,7 @@
-import '../css/modal.css';
+import '../../css/modal.css';
 import { createPortal } from "react-dom";
 import {SettingsModal} from "./Modal";
-import { ModalContextProvider, useModalContext } from '../components/ModalManager';
+import { ModalContextProvider, useModalContext } from './ModalManager';
 
 export function ModalContainer() {
     const {modalState} = useModalContext();

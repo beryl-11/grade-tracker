@@ -1,5 +1,4 @@
-import { useContext, useState } from "react";
-import { createContext } from "react";
+import { createContext, useContext, useState } from "react";
 
 const ModalContext = createContext(null);
 

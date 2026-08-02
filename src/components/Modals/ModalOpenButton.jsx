@@ -1,4 +1,4 @@
-import { useModalContext } from "../components/ModalManager";
+import { useModalContext } from "./ModalManager";
 
 export default function ModalOpenButton() {
     const {openModal} = useModalContext();
