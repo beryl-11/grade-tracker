@@ -17,10 +17,13 @@ function Layout() {
         <main>
           <Outlet />
         </main>
-        <QuickActionToolbar /></div>
+        <QuickActionToolbar />
+      </div>
+
       <div id="overlays">
         <ModalContainer />
-      </div></ModalContextProvider>
+      </div>
+    </ModalContextProvider>
   </>
 }
 
