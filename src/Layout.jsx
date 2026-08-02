@@ -3,7 +3,7 @@ import GlobalHeaderBar from "./components/GlobalHeaderBar"
 import QuickActionToolbar from "./components/QuickActions/QuickActionToolbar"
 import './css/style.css' // do something about this
 import ModalLayout from "./modals/Modal"
-import ModalContainer from "./modals/ModalContainer"
+import { ModalContainer } from "./modals/ModalContainer"
 import { createContext, useContext, useState } from "react"
 
 
@@ -17,7 +17,7 @@ function Layout() {
       </main>
       <QuickActionToolbar /></div>
     <div id="overlays">
-        <ModalContainer />
+      <ModalContainer />
     </div>
   </>
 }

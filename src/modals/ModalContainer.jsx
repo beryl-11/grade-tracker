@@ -5,7 +5,7 @@ import { createContext, useContext, useState } from 'react';
 
 const ModalContext = createContext();
 
-export default function ModalContainer() {
+export function ModalContainer() {
     const [modalState, setModalState] = useState("closed")
 
     function closeModal() {
