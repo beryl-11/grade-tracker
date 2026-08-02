@@ -6,7 +6,7 @@ export default function Modal() {
                 <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
             </svg>
         </button>
-
+        {/* TODO: Delete the following dummy text and move them to a modal content component or something similar. */}
         <div class="modal-header">
             <h1>Header</h1>
         </div>
