@@ -1,5 +1,5 @@
 import { Outlet } from "react-router-dom"
-import GlobalHeaderBar from "./components/GlobalHeaderBar"
+import GlobalHeaderBar from "./components/GlobalHeaderBar/GlobalHeaderBar"
 import QuickActionToolbar from "./components/QuickActions/QuickActionToolbar"
 import './css/style.css' // do something about this
 import { ModalContainer } from "./components/Modals/ModalContainer"

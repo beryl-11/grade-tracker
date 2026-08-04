@@ -14,7 +14,7 @@ export function ModalContainer() {
                 <AddCourseModal />
             </div>}
         </>,
-        overlaysDiv
+        document.body
     )
 
 }
