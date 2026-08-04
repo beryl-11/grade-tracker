@@ -3,15 +3,13 @@ import { Link } from "react-router-dom";
 import { useState } from "react";
 import ClickableTableRow from "./ClickableTableRow";
 
-function Collapsible(props) {
+function Collapsible({ semester, courseList }) {
     const [collapsedState, setCollapsedState] = useState("expanded");
 
     //TODO: Find more elegant way of toggling states
     function toggleCollapsible() {
         setCollapsedState(prevState => (prevState === "collapsed" ? "expanded" : "collapsed"));
     }
-
-    const { semester, courseList } = props;
 
     return <div className="collapsible">
         <button type="button" className="collapsible-btn" onClick={toggleCollapsible}>{semester.replace("-", " ")}</button>
