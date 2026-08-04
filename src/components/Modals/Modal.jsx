@@ -1,15 +1,8 @@
-import { useModalContext } from "./ModalManager";
+import ModalExitButton from "./ModalExitButton";
 
 function ModalTemplate({ children }) {
-  const { closeModal } = useModalContext();
-
   return <div className="modal">
-    <button type="button" className="modal-exit-btn" aria-label="exit modal button" onClick={closeModal}>
-      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
-        className="icon">
-        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
-      </svg>
-    </button>
+    <ModalExitButton />
     {children}
   </div>
 
