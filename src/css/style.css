@@ -46,10 +46,6 @@ section {
     /* border: 1px solid red; */
 }
 
-svg {
-    display: block;
-}
-
 button {
     cursor: pointer;
     background-color: var(--accent-color);
@@ -136,16 +132,14 @@ tr:nth-of-type(2n):not(.collapsible-content tr) {
     aspect-ratio: 1/1;
 }
 
+/* Button Style */
 .icon {
-    stroke-width: 2;
     color: var(--icon-color);
     aspect-ratio: 1/1;
     min-width: 20px;
+    /* border: 1px solid black; */
 }
 
-.icon:hover {
-    fill: var(--icon-color);
-}
 
 /* || Global Header */
 .global-header {
