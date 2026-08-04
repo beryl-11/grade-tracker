@@ -1,6 +1,6 @@
 import { useModalContext } from "./ModalManager";
 
-export default function ModalOpenButton() {
+export default function ModalOpenButton({modalRef, textContent = ""}) {
     const {openModal} = useModalContext();
 
     const openBtnHandler = () => {
