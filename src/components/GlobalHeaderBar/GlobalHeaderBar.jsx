@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom"
-import ModalOpenButton from "./Modals/ModalOpenButton"
+import ModalOpenButton from "../Modals/ModalOpenButton"
 
 export default function GlobalHeaderBar() {
   return <>
@@ -9,7 +9,7 @@ export default function GlobalHeaderBar() {
       </div>
 
       <div className="header-btn-wrapper flex-container">
-        <ModalOpenButton className="global-header-btn" />  {/* TODO: Fix style of global header buttons*/}
+        <ModalOpenButton className="global-header-btn" id="settings-btn" />  {/* TODO: Fix style of global header buttons*/}
       </div>
     </header>
     </>
