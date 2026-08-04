@@ -35,30 +35,30 @@ export function AddCourseModal() {
     <form id="add-course-form">
       <div className="modal-section">
         <h2>Basic Course Information</h2>
-        <label for="course-code">Course Code: </label>
+        <label htmlFor="course-code">Course Code: </label>
         <input type="text" name="courseCode" id="course-code" required />
 
-        <label for="course-name">Course Name: </label>
+        <label htmlFor="course-name">Course Name: </label>
         <input type="text" name="courseName" id="course-name" required />
 
         <br />
 
-        <label for="semester">Semester: </label>
+        <label htmlFor="semester">Semester: </label>
         <select name="semester" id="semester" required>
           <option>Fall 2026</option>
           <option>Spring 2025</option>
         </select>
 
-        <label for="credits">Number of Credits: </label>
+        <label htmlFor="credits">Number of Credits: </label>
         <input type="number" name="credits" id="credits" required />
       </div>
       <div className="modal-section">
         <h2>Add Components</h2>
         <p>The weight of your components should add to 100%.</p>
 
-        <label for="component-name">Component Name: </label>
+        <label htmlFor="component-name">Component Name: </label>
         <input type="text" name="componentName" id="component-name" multiple />
-        <label for="component-weight">Component Weight: </label>
+        <label htmlFor="component-weight">Component Weight: </label>
         <input type="number" name="componentWeight" id="component-weight" /><br />
         <button type="button">Add Component</button>
 
