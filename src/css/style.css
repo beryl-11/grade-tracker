@@ -52,6 +52,9 @@ button {
     border: 3px solid var(--focus-color);
     border-radius: 1.5rem;
     color: var(--text-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 button:hover {
