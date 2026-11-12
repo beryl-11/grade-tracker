@@ -1,30 +1,31 @@
-// import courses from "./courses.json" with { type: "json" };
+import courses from "./courses.json" with { type: "json" };
 // temp courses var to replace import statement
-const courses = {
-    "Fall 2025": [
-        {
-            "courseName": "F25C1", "credit": 4, "grade": "A+", "assignments": [
-                { "assignmentName": "Homework 1", "score": 95, "max": 100, "weight": 1 },
-                { "assignmentName": "Midterm", "score": 88, "max": 100, "weight": 1 }
-            ]
-        },
-        {
-            "courseName": "F25C2", "credit": 2, "grade": "A-", "assignments": [
-                { "assignmentName": "Homework 1", "score": 95, "max": 100, "weight": 1 },
-                { "assignmentName": "Midterm", "score": 88, "max": 100, "weight": 1 }
-            ]
-        }
-    ],
+// TODO: need to edit rendering to adhere to courses format in json file
+// const courses = {
+//     "Fall 2025": [
+//         {
+//             "courseName": "F25C1", "credit": 4, "grade": "A+", "assignments": [
+//                 { "assignmentName": "Homework 1", "score": 95, "max": 100, "weight": 1 },
+//                 { "assignmentName": "Midterm", "score": 88, "max": 100, "weight": 1 }
+//             ]
+//         },
+//         {
+//             "courseName": "F25C2", "credit": 2, "grade": "A-", "assignments": [
+//                 { "assignmentName": "Homework 1", "score": 95, "max": 100, "weight": 1 },
+//                 { "assignmentName": "Midterm", "score": 88, "max": 100, "weight": 1 }
+//             ]
+//         }
+//     ],
 
-    "Spring 2026": [
-        {
-            "courseName": "S26C1", "credit": 4, "grade": "A+", "assignments": [
-                { "assignmentName": "Homework 1", "score": 95, "max": 100, "weight": 1 },
-                { "assignmentName": "Midterm", "score": 88, "max": 100, "weight": 1 }
-            ]
-        }
-    ]
-}
+//     "Spring 2026": [
+//         {
+//             "courseName": "S26C1", "credit": 4, "grade": "A+", "assignments": [
+//                 { "assignmentName": "Homework 1", "score": 95, "max": 100, "weight": 1 },
+//                 { "assignmentName": "Midterm", "score": 88, "max": 100, "weight": 1 }
+//             ]
+//         }
+//     ]
+// }
 
 /*--------------------------------------------Code--------------------------------------------*/
 /* Function definitions */
@@ -87,7 +88,7 @@ if (isEmpty(courses)) {
             const newRowCourseName = document.createElement("td"), newRowCourseGrade = document.createElement("td");
             newRowCourseName.textContent = course["courseName"];
             newRowCourseName.classList.add("course-name");
-
+            
             newRowCourseGrade.textContent = course["grade"];
             newRowCourseGrade.classList.add("course-grade");
 
