@@ -70,9 +70,11 @@ if (isEmpty(courses)) {
         newButton.classList.add("collapsible-btn");
         newButton.textContent = semester;
 
+        // create table for collapsible button
         const newCollapsibconstable = document.createElement("table");
         newCollapsibconstable.classList.add("collapsible-content", "collapsed");
 
+        // add the button and table to the group
         newSemesterGroup.append(newButton, newCollapsibconstable);
 
         // create the rows of the table
